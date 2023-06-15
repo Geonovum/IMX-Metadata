@@ -2,7 +2,7 @@ let respecConfig = {
   useLogo: true,
   useLabel: true,
   // title is verplicht! Neem hier de titel van het document op ----------------------
-  title: "[TODO: Neem titel op in config.js]",
+  title: "WaU - Metadata basic principles",
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   specStatus: "wv",                   // Werkversie
   //specStatus: "cv",               // Consultatieversie
@@ -27,7 +27,7 @@ let respecConfig = {
   //licence: "cc0",                 // Public Domain Dedication
   licence: "cc-by",                 // Attribution, met bronvermelding
   //-- shortName is verplicht! (komt in de URL: kies logische afkorting)--------------
-  shortName: "NL-ReSpec-GN-template",
+  shortName: "WaU-Metadata",
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
   //publishDate: "2023-03-28",
@@ -42,7 +42,7 @@ let respecConfig = {
   editors:
     [
       {
-        name: "voornaam achternaam",
+        name: "Paul Janssen",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       }
