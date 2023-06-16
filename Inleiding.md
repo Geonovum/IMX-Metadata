@@ -2,38 +2,21 @@
 
 Kadaster and Geonovum are developing a mechanism to facilitate the semantic integration of decentralized data registers. A central API operates on an integrated semantic layer. The semantic layer constitutes of a coherent information model integrating several domain specific domain models. An API orchestration layer directs data communication to and from existing data registries.
 
-Data retrieval is according to the information model of the semantic layer. Data retrieval will optionally include metadata about the lineage (provenance) of the data.
+Data retrieval is according to the information model of the semantic layer. Data retrieval will optionally include metadata about the lineage (provenance) of each singular piece of information about a resource.
 
-This document specifies the lineage model used and the mechanism to relate the lineage data as metadata to published data.
-
-
-### Scope
-
-The scope of this lineage model is:
-
-- lineage related to data being published as a result of data integration. The lineage will describe source and process/operation data
-- lineage data a data level, meaning the property level of entities
-- lineage data at the instance level of properties
-
-This report will also include a specification of relating lineage as metadata to conceptual UML application schema at the property level.
-
-
+This document describes a proposed standard for describing data elements.
 
 ### Target audience
 
 Information modeller, API developer, IT architect.
 
-
-
 ### Introduction to document
 
 *Beschrijf hoe het document gelzezen moet worden, welke hoofdstukken voor wie bedoeld zijn, enz...*
 
-[Analysis](#analysis)  
-[Requierments and approach](#requirements-and-approach)   
-[Expert Sessions](#expert-sessions)   
-[Information model](#information-model)   
-[Conclusions and recommendations](#conclusions-and-recommendations)  
+Chapter 2 - [Vocabulary](#vocabulary) introduces a conceptual model for data elements. Since this model describes how data van be described it is considered a metadatamodel.
+
+Chapter 3 - [Metadata MIM extension](#metadata-mim-extension) we will apply thhis vocabulary and introduce an extention to MIM that allows to connect a modelelement in an information model to a modelelement in a metadatamodel.
 
 ### Working proces
 

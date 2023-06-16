@@ -52,9 +52,9 @@ let respecConfig = {
   authors:
     [
       {
-        name: "voornaam achternaam",
-        company: "Geonovum",
-        companyURL: "https://www.geonovum.nl",
+        name: "Jesse Bakker",
+        company: "Kadaster",
+        companyURL: "https://www.kadaster.nl"
       }
     ],
   //neem hier de URL van de github repository op waar het respec document in staat
@@ -65,5 +65,16 @@ let respecConfig = {
           label: "pdf",
           uri: "template.pdf",
       },
-  ],
+  ], 
+  localBiblio: 
+  {
+    "Property-Stereotype-for-Metadata":
+      {
+        title:      "Property Stereotype for Metadata",
+        href:       "https://shapechange.net/wp-content/uploads/2019/12/UGAS19-D100_property_stereotypes.pdf",
+        status:     "V1.0",
+        publisher:  "Publisher-1",
+        company:    "Interactive Instruments",
+    },
+  }
 };

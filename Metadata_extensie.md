@@ -7,7 +7,7 @@ Lineage information is considered as metadata in relation to elements in a produ
 
 The lineage model provides lineage information as metadata at the property level .
 
-Requierments of the metadata in this respect are the following:
+Requirements of the metadata in this respect are the following:
 
 1. metadata at the property level of objecttypes
 2. metadata at the instance level of properties
@@ -19,7 +19,7 @@ ad 1,2: UML-MIM does not have a construct to bind (meta)data at properties, i.e.
 
 ad 3,4: The metadata or in this case lineage model is modelled independently from the product model. Both are 'loosely' connected.
 
-An approach to these requiremnst can be found in the [[Property-Stereotype-for-Metadata]]. This publication presents an UML extension through a stereotype `«propertyMetadata»` and a tagged value `metadataType`. An example is presented below.
+An approach to these requirements can be found in the [[Property-Stereotype-for-Metadata]]. This publication presents an UML extension through a stereotype `«propertyMetadata»` and a tagged value `metadataType`. An example is presented below.
 
 <figure id="Figure_1">
 <img src="media/example_extension.png" alt="">
@@ -34,7 +34,7 @@ The above presented pattern is slightly adapted by changing the sterotype name f
 <figcaption>Metadata expressed at the conceptual level of a productmodel</figcaption>
 </figure>
 
-Explanation and definition.
+# Explanation and definition
 
 Stereotype «HasMetadata»
 >   **Definition «HasMetadata»**  
@@ -42,8 +42,6 @@ Stereotype «HasMetadata»
 
 Description:
 The stereotype specifies that this information element has metadata associated. This is a specification at the conceptual level. A related tagged value `Metadata type` specifies the association to specific metadata.
-
-
 
 Tagged Value: Metadata type
 >   **Definition Metadata type**  
@@ -53,7 +51,6 @@ Description:
 This tagged value specifies the relation to a specific target class of or in a specific metadata model. This target class serves as the receptor defining the type of metadata that is associated.
 
 In figure 2 the value for `Metadata type = GeorkestreerdGegeven` is only an example and may differ according to the required metadata class that relates to the specified metadata.
-
 
 # MIM-UML extension
 
@@ -83,7 +80,7 @@ This UML profile is implemented in a EA MDG Technology named [HasMetadata_mdg](U
 <figcaption>Example of Stereotype `«HasMetadata»` applied in MIM-UML model</figcaption>
 </figure>
 
-# Implementation, encoding.
+# Implementation, encoding
 
 The challenges regarding the implementation of this conceptual metadata construct vary across different encoding formats. For example in XML a construct exists to add attributes to XML elements, which provides a means to give attributes to properties, in this case reference to a metadata object. In JSON this does not exist. The `«HasMetadata»` stereotype is therefore extended with a model transformation that objectifies properties of a productmodel. The objectified properties are not part of the productmodel but serve as a loosly coupled intermediate binding mechanism between data and metadata.
 
