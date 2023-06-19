@@ -307,13 +307,13 @@ ul.index code{color:inherit}
     }
   },
   "localBiblio": {
-    "SemVer": {
-      "href": "https://semver.org",
-      "title": "Semantic Versioning 2.0.0",
-      "authors": [
-        "T. Preston-Werner"
-      ],
-      "date": "June 2013"
+    "Property-Stereotype-for-Metadata": {
+      "title": "Property Stereotype for Metadata",
+      "href": "https://shapechange.net/wp-content/uploads/2019/12/UGAS19-D100_property_stereotypes.pdf",
+      "status": "V1.0",
+      "publisher": "Publisher-1",
+      "company": "Interactive Instruments",
+      "id": "property-stereotype-for-metadata"
     }
   },
   "title": "WaU - Metadata basic principles",
@@ -331,9 +331,9 @@ ul.index code{color:inherit}
   ],
   "authors": [
     {
-      "name": "voornaam achternaam",
-      "company": "Geonovum",
-      "companyURL": "https://www.geonovum.nl"
+      "name": "Jesse Bakker",
+      "company": "Kadaster",
+      "companyURL": "https://www.kadaster.nl"
     }
   ],
   "github": "https://github.com/Geonovum/NL-ReSpec-GN-template",
@@ -353,7 +353,7 @@ ul.index code{color:inherit}
     <h2>
       Geonovum Handreiking<br>
       Werkversie
-      <time class="dt-published" datetime="2023-06-15">15 juni 2023</time>
+      <time class="dt-published" datetime="2023-06-19">19 juni 2023</time>
     </h2>
     <dl>
       
@@ -372,7 +372,7 @@ ul.index code{color:inherit}
   </dd>
       
       <dt>Auteur:</dt><dd class="editor p-author h-card vcard">
-    <span class="p-name fn">voornaam achternaam</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+    <span class="p-name fn">Jesse Bakker</span> (<a class="p-org org h-org" href="https://www.kadaster.nl">Kadaster</a>)
   </dd>
       <dt>Doe mee:</dt><dd>
     <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/">GitHub Geonovum/NL-ReSpec-GN-template</a>
@@ -398,108 +398,25 @@ ul.index code{color:inherit}
   </div>
   <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>TODO: vul in abstract.md een abstract in.</p>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.1 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.2 </bdi>Target audience</a></li><li class="tocline"><a class="tocxref" href="#introduction-to-document"><bdi class="secno">1.3 </bdi>Introduction to document</a></li><li class="tocline"><a class="tocxref" href="#working-proces"><bdi class="secno">1.4 </bdi>Working proces</a></li></ol></li><li class="tocline"><a class="tocxref" href="#metadata-mim-extension"><bdi class="secno">2. </bdi>Metadata MIM extension</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">2.1 </bdi>Requirements</a></li><li class="tocline"><a class="tocxref" href="#mim-uml-extension"><bdi class="secno">2.2 </bdi>MIM-UML extension</a></li><li class="tocline"><a class="tocxref" href="#implementation-encoding"><bdi class="secno">2.3 </bdi>Implementation, encoding.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#data-element"><bdi class="secno">3. </bdi>Data element</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">4. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">5. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target audience</a></li><li class="tocline"><a class="tocxref" href="#introduction-to-document"><bdi class="secno">1.2 </bdi>Introduction to document</a></li><li class="tocline"><a class="tocxref" href="#working-proces"><bdi class="secno">1.3 </bdi>Working proces</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vocabulary"><bdi class="secno">2. </bdi>Vocabulary</a></li><li class="tocline"><a class="tocxref" href="#metadata-mim-extension"><bdi class="secno">3. </bdi>Metadata MIM extension</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">3.1 </bdi>Requirements</a></li><li class="tocline"><a class="tocxref" href="#explanation-and-definition"><bdi class="secno">3.2 </bdi>Explanation and definition</a></li><li class="tocline"><a class="tocxref" href="#mim-uml-extension"><bdi class="secno">3.3 </bdi>MIM-UML extension</a></li><li class="tocline"><a class="tocxref" href="#implementation-encoding"><bdi class="secno">3.4 </bdi>Implementation, encoding</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">4. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">5. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</a></li></ol></li></ol></nav>
 
   
   <section class="informative" id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
 <p>Kadaster and Geonovum are developing a mechanism to facilitate the semantic integration of decentralized data registers. A central API operates on an integrated semantic layer. The semantic layer constitutes of a coherent information model integrating several domain specific domain models. An API orchestration layer directs data communication to and from existing data registries.</p>
-<p>Data retrieval is according to the information model of the semantic layer. Data retrieval will optionally include metadata about the lineage (provenance) of the data.</p>
-<p>This document specifies the lineage model used and the mechanism to relate the lineage data as metadata to published data.</p>
-<section id="scope"><div class="header-wrapper"><h3 id="x1-1-scope"><bdi class="secno">1.1 </bdi>Scope</h3><a class="self-link" href="#scope" aria-label="Permalink for Section 1.1"></a></div>
-<p>The scope of this lineage model is:</p>
-<ul>
-<li>lineage related to data being published as a result of data integration. The lineage will describe source and process/operation data</li>
-<li>lineage data a data level, meaning the property level of entities</li>
-<li>lineage data at the instance level of properties</li>
-</ul>
-<p>This report will also include a specification of relating lineage as metadata to conceptual UML application schema at the property level.</p>
-</section><section id="target-audience"><div class="header-wrapper"><h3 id="x1-2-target-audience"><bdi class="secno">1.2 </bdi>Target audience</h3><a class="self-link" href="#target-audience" aria-label="Permalink for Section 1.2"></a></div>
+<p>Data retrieval is according to the information model of the semantic layer. Data retrieval will optionally include metadata about the lineage (provenance) of each singular piece of information about a resource.</p>
+<p>This document describes a proposed standard for describing data elements.</p>
+<section id="target-audience"><div class="header-wrapper"><h3 id="x1-1-target-audience"><bdi class="secno">1.1 </bdi>Target audience</h3><a class="self-link" href="#target-audience" aria-label="Permalink for Section 1.1"></a></div>
 <p>Information modeller, API developer, IT architect.</p>
-</section><section id="introduction-to-document"><div class="header-wrapper"><h3 id="x1-3-introduction-to-document"><bdi class="secno">1.3 </bdi>Introduction to document</h3><a class="self-link" href="#introduction-to-document" aria-label="Permalink for Section 1.3"></a></div>
+</section><section id="introduction-to-document"><div class="header-wrapper"><h3 id="x1-2-introduction-to-document"><bdi class="secno">1.2 </bdi>Introduction to document</h3><a class="self-link" href="#introduction-to-document" aria-label="Permalink for Section 1.2"></a></div>
 <p><em>Beschrijf hoe het document gelzezen moet worden, welke hoofdstukken voor wie bedoeld zijn, enz...</em></p>
-<p><a href="#analysis">Analysis</a><br><a href="#requirements-and-approach">Requierments and approach</a><br><a href="#expert-sessions">Expert Sessions</a><br><a href="#information-model">Information model</a><br><a href="#conclusions-and-recommendations">Conclusions and recommendations</a>  </p>
-</section><section id="working-proces"><div class="header-wrapper"><h3 id="x1-4-working-proces"><bdi class="secno">1.4 </bdi>Working proces</h3><a class="self-link" href="#working-proces" aria-label="Permalink for Section 1.4"></a></div>
+<p>Chapter 2 - <a href="#vocabulary">Vocabulary</a> introduces a conceptual model for data elements. Since this model describes how data van be described it is considered a metadatamodel.</p>
+<p>Chapter 3 - <a href="#metadata-mim-extension">Metadata MIM extension</a> we will apply thhis vocabulary and introduce an extention to MIM that allows to connect a modelelement in an information model to a modelelement in a metadatamodel.</p>
+</section><section id="working-proces"><div class="header-wrapper"><h3 id="x1-3-working-proces"><bdi class="secno">1.3 </bdi>Working proces</h3><a class="self-link" href="#working-proces" aria-label="Permalink for Section 1.3"></a></div>
 <p>This document, lineage model, is developed in the WaU project .....
 The principal working method is agile development through several High5 sessions on use cases of increasing complex information content and ....</p>
 </section></section>
-  <section id="metadata-mim-extension"><div class="header-wrapper"><h2 id="x2-metadata-mim-extension"><bdi class="secno">2. </bdi>Metadata MIM extension</h2><a class="self-link" href="#metadata-mim-extension" aria-label="Permalink for Section 2."></a></div>
-<p>Lineage information is considered as metadata in relation to elements in a productmodel. For this reason we consider lineage as metadata and will provide a common solution to relate metadata to semantics of a productmodel.</p>
-<section id="requirements"><div class="header-wrapper"><h3 id="x2-1-requirements"><bdi class="secno">2.1 </bdi>Requirements</h3><a class="self-link" href="#requirements" aria-label="Permalink for Section 2.1"></a></div>
-<p>The lineage model provides lineage information as metadata at the property level .</p>
-<p>Requierments of the metadata in this respect are the following:</p>
-<ol>
-<li>metadata at the property level of objecttypes</li>
-<li>metadata at the instance level of properties</li>
-<li>metadata can optionally be published</li>
-<li>metadata model does not have effect on a productmodel</li>
-</ol>
-<p>ad 1,2: UML-MIM does not have a construct to bind (meta)data at properties, i.e. attributes or association ends. It is therefore necessary to extend UML-MIM.</p>
-<p>ad 3,4: The metadata or in this case lineage model is modelled independently from the product model. Both are 'loosely' connected.</p>
-<p>An approach to these requiremnst can be found in the [<cite><a class="bibref respec-offending-element" data-link-type="biblio" href="#bib-property-stereotype-for-metadata" title="Reference &quot;[Property-Stereotype-for-Metadata]&quot; not found." id="respec-offender-reference-property-stereotype-for-metadata-not-found">Property-Stereotype-for-Metadata</a></cite>]. This publication presents an UML extension through a stereotype <code>«propertyMetadata»</code> and a tagged value <code>metadataType</code>. An example is presented below.</p>
-<figure id="Figure_1">
-<img src="media/example_extension.png" alt="">
-<figcaption><a class="self-link" href="#Figure_1">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title">Example showing use of stereotype: Properties with stereotype <code>«HasMetadata»</code> reference metadata types via tagged value <code>metadataType</code>. Source:[<cite><a class="bibref respec-offending-element" data-link-type="biblio" href="#bib-property-stereotype-for-metadata" title="Reference &quot;[Property-Stereotype-for-Metadata]&quot; not found." id="respec-offender-reference-property-stereotype-for-metadata-not-found-0">Property-Stereotype-for-Metadata</a></cite>]</span></figcaption>
-</figure>
-
-
-<p>The above presented pattern is slightly adapted by changing the sterotype name from propertyMetadata to a general <code>«HasMetadata»</code>. The pattern is presented below on a general class AnyFeature representing any possible feature type in a productmodel.</p>
-<figure id="Figure_2">
-<img src="media/ProductmodelProxy.png" alt="">
-<figcaption><a class="self-link" href="#Figure_2">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title">Metadata expressed at the conceptual level of a productmodel</span></figcaption>
-</figure>
-
-<p>Explanation and definition.</p>
-<p>Stereotype «HasMetadata»</p>
-<blockquote>
-<p>  <strong>Definition «HasMetadata»</strong><br>  This element has associated metadata.</p>
-</blockquote>
-<p>Description:
-The stereotype specifies that this information element has metadata associated. This is a specification at the conceptual level. A related tagged value <code>Metadata type</code> specifies the association to specific metadata.</p>
-<p>Tagged Value: Metadata type</p>
-<blockquote>
-<p>  <strong>Definition Metadata type</strong><br>  Name of the target class of associated metadata.</p>
-</blockquote>
-<p>Description:
-This tagged value specifies the relation to a specific target class of or in a specific metadata model. This target class serves as the receptor defining the type of metadata that is associated.</p>
-<p>In figure 2 the value for <code>Metadata type = GeorkestreerdGegeven</code> is only an example and may differ according to the required metadata class that relates to the specified metadata.</p>
-</section><section id="mim-uml-extension"><div class="header-wrapper"><h3 id="x2-2-mim-uml-extension"><bdi class="secno">2.2 </bdi>MIM-UML extension</h3><a class="self-link" href="#mim-uml-extension" aria-label="Permalink for Section 2.2"></a></div>
-<p>The defined stereotype and related tagged value lead to an extension of the MIM model. As the extension for now is independent from MIM the extension is described both as an extension of the UML metamodel and the MIM-UML model.</p>
-<p><strong>Extension on UML</strong></p>
-<figure id="Figure_3">
-<img src="media/UML extension.png" alt="">
-<figcaption><a class="self-link" href="#Figure_3">Figuur <bdi class="figno">3</bdi></a> <span class="fig-title">Stereotype <code>«HasMetadata»</code> as extension on UML metaclass Property</span></figcaption>
-</figure>
-
-<p>This UML profile is implemented in a EA MDG Technology named <a href="UML-profile/HasMetadata_mdg_build01.xml">HasMetadata_mdg</a>.</p>
-<p><strong>Extension on MIM-UML</strong></p>
-<figure id="Figure_4">
-<img src="" alt="">
-<figcaption><a class="self-link" href="#Figure_4">Figuur <bdi class="figno">4</bdi></a> <span class="fig-title">Todo: Stereotype <code>«HasMetadata»</code> as extension on MIM-UML metaclasses</span></figcaption>
-</figure>
- 
- 
-<p> <strong>Example of this Metadata profile applied in a MIM-UML model.</strong></p>
- <figure id="Figure_5">
-<img src="media/Example_gebouw.png" alt="">
-<figcaption><a class="self-link" href="#Figure_5">Figuur <bdi class="figno">5</bdi></a> <span class="fig-title">Example of Stereotype <code>«HasMetadata»</code> applied in MIM-UML model</span></figcaption>
-</figure>
-
-</section><section id="implementation-encoding"><div class="header-wrapper"><h3 id="x2-3-implementation-encoding"><bdi class="secno">2.3 </bdi>Implementation, encoding.</h3><a class="self-link" href="#implementation-encoding" aria-label="Permalink for Section 2.3"></a></div>
-<p>The challenges regarding the implementation of this conceptual metadata construct vary across different encoding formats. For example in XML a construct exists to add attributes to XML elements, which provides a means to give attributes to properties, in this case reference to a metadata object. In JSON this does not exist. The <code>«HasMetadata»</code> stereotype is therefore extended with a model transformation that objectifies properties of a productmodel. The objectified properties are not part of the productmodel but serve as a loosly coupled intermediate binding mechanism between data and metadata.</p>
-<p>The UML model of this pattern is presented below.</p>
-<figure id="Figure_6">
-<img src="media/Binding model.png" alt="">
-<figcaption><a class="self-link" href="#Figure_6">Figuur <bdi class="figno">6</bdi></a> <span class="fig-title">Pattern for the Metadata binding model. Objectification of properties.</span></figcaption>
-</figure>
-
-
-<p>Explanation of diagram.<br>The Metadata binding model serves as a objectification of the properties of the productmodel. Each property (attributes and association roles) is transfomed to an instance of the objecttype <code>GeorkestreerdGegeven</code> having its name in <code>propertyName</code>. Depending on the type of property (or its associated value type) a SimplePropertData, ComplexPropertyData or the AssociationPropertyData is chosen.
-SimplePropertyData for properties with a unstructured valuetypes, ComplexPropertyData for structured valuetypes and AssociationPropertyData for association roles.
-The value of a property is transformed to the <code>value</code> attribute or the <code>value</code> association role.</p>
-<p>In this model there is no explicit information link between a property and its value of the productmodel and its objectified <code>PropertyData</code> and value instance. To bind data of the productmodel to instances of 'PropertyData' is bij convention. The convention is that instances from objecttypes of the Productmodel and its properties and values by convention are bindend to instances of PropertyData and values in the Metadata Binding Model having the value for <code>propertName</code> and <code>value</code> equal to the name of the property and its value.<br>So without specifying specifically for the three subtypes of <code>GeorkestreerdGegeven</code> the convention rule is: <code>Productmodel.property = GeorkestreerdGegeven.propertyName AND Productmodel.property.value = GeorkestreerdGegeven.value</code></p>
-</section></section>
-  <section id="data-element"><div class="header-wrapper"><h2 id="x3-data-element"><bdi class="secno">3. </bdi>Data element</h2><a class="self-link" href="#data-element" aria-label="Permalink for Section 3."></a></div>
-<p>The first notion we introduce is that of a single statement or data element. Information objects we consume to draw insights from or base decisions on are comprised out of multiple atomic units of information, each captured by one attribute or association. Consider the following information object in JSON:</p>
+  <section id="vocabulary"><div class="header-wrapper"><h2 id="x2-vocabulary"><bdi class="secno">2. </bdi>Vocabulary</h2><a class="self-link" href="#vocabulary" aria-label="Permalink for Section 2."></a></div>
+<p>In order to provide metadata about any singular piece of information about a resource, we need to be able to talk about it and in turn capture data about it. The first notion we therefore introduce is the <a data-link-type="dfn|abstract-op" href="#dfn-data-element" class="internalDFN" id="ref-for-dfn-data-element-1">data element</a>. Information objects we consume to draw insights from or base decisions on are comprised out of multiple atomic units of information, each captured by one attribute or association. Consider the following information object in JSON:</p>
 <pre aria-busy="false"><code class="hljs json">{
   <span class="hljs-attr">"omschrijving"</span>: <span class="hljs-string">"Laan van Westenenk 701, 7334DP Apeldoorn"</span>,
   <span class="hljs-attr">"plaatsnaam"</span>: <span class="hljs-string">"Apeldoorn"</span>,
@@ -521,10 +438,10 @@ The value of a property is transformed to the <code>value</code> attribute or th
   gebouw:plaatsnaam <span class="hljs-string">"Apeldoorn"</span>;
   gebouw<span class="hljs-selector-pseudo">:is</span>Hoofdadres true .</code></pre>
 
-<p>Each data element can have its own lineage; its own algorithm to determine the given value. By treating these data elements as object; allows us to describe and provide information about them. For instance to state that <code>{ "plaatsnaam": "Apeldoorn" }</code> is derived from a data element in the BAG. 
+<p>Each data element can have its own lineage; its own algorithm to determine the given value. By treating these data elements as objects; allows us to describe and provide information about them. For instance to state that <code>{ "plaatsnaam": "Apeldoorn" }</code> is derived from a data element in the BAG. 
 In the following diagram both the object and the data elements are modelled as an objecttype, as they are things; objects, we are interested in describing.</p>
-<p><figure id="fig-generatedID"><img src="media/level1.1.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID">Figuur <bdi class="figno">7</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
-<p>A data element is identified by it's 1) subject 2) value and 3) property
+<p><figure id="fig-generatedID"><img src="media/level1.1.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
+<p>A data element is identified by it's 1) <a data-link-type="dfn|abstract-op" href="#dfn-subject" class="internalDFN" id="ref-for-dfn-subject-1">subject</a> 2) <a data-link-type="dfn|abstract-op" href="#dfn-value" class="internalDFN" id="ref-for-dfn-value-1">value</a> and 3) <a data-link-type="dfn|abstract-op" href="#dfn-property" class="internalDFN" id="ref-for-dfn-property-1">property</a>
 e.g.</p>
 <pre><code aria-busy="false" class="hljs json">{
     <span class="hljs-attr">"property"</span>: <span class="hljs-string">"plaatsnaam"</span>,
@@ -545,61 +462,149 @@ e.g.</p>
 </tr>
 </thead>
 <tbody><tr>
-<td>object</td>
+<td><dfn id="dfn-object" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">object</dfn></td>
 <td>An object is any resource that is the subject of a registration.</td>
 </tr>
 <tr>
-<td>data element</td>
+<td><dfn id="dfn-data-element" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">data element</dfn></td>
 <td>A data element is any singular piece of information about a resource.</td>
 </tr>
 <tr>
-<td>subject</td>
+<td><dfn id="dfn-subject" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">subject</dfn></td>
 <td>A subject is an object a data element is about.</td>
 </tr>
 <tr>
-<td>property</td>
+<td><dfn id="dfn-property" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">property</dfn></td>
 <td>A property is the characteristic of the subject a data element is about.</td>
 </tr>
 <tr>
-<td>value</td>
+<td><dfn id="dfn-value" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">value</dfn></td>
 <td>The value of a data element.</td>
 </tr>
 </tbody></table>
 <p>Several subtypes of data elements are identified; but these are omitted in the following examples for simplicity's sake.</p>
-<p><figure id="fig-generatedID-0"><img src="media/level1.2.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID-0">Figuur <bdi class="figno">8</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
-<p>A data element can be described from different point of views. The perpective the lineage model takes is one of provenance. Questions to be answered include, for instance, where, how and by whom, is the statement <code>Building G0200.42b3d39246840268e0530a0a28492340 has construction date 2006</code> created? Other models could address other aspects of a data element; for instance whether it is subject to an examination of correctness (which could be relevant for the BAG: <a href="https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek">https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek</a>) or what is the quality of a data element. </p>
+<p><figure id="fig-generatedID-0"><img src="media/level1.2.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID-0">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
+<p>A data element can be described from different point of views. The perpective a lineage model would take is one of provenance. Questions to be answered include, for instance, where, how and by whom, is the statement <code>Building G0200.42b3d39246840268e0530a0a28492340 has construction date 2006</code> created? Other models could address other aspects of a data element; for instance whether it is subject to an examination of correctness (which could be relevant for the BAG: <a href="https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek">https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek</a>) or what is the quality of a data element. </p>
 <p>A data element is part of the information object describing an object; but this is omitted in the following examples.</p>
-<p><figure id="fig-generatedID-1"><img src="media/level1.3.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID-1">Figuur <bdi class="figno">9</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
-<p>This gives a basic model applicable for many usecases. This lineage model add to this a way to connect one data element to one or more other data elements it is derived from. The latter are called source data elements, the former orchestrated data elements.
-For the source data elements it is important to know which registry or dataset it is retrieved from so that users can interpret the source data element in the context it was published in. This also allows allows users to find related information.</p>
+<p><figure id="fig-generatedID-1"><img src="media/level1.3.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID-1">Figuur <bdi class="figno">3</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
+<p>This gives a basic model applicable for any usecase where metadata about data elements is of importance.</p>
+<p><figure id="fig-generatedID-2"><img src="media/Data%20element.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID-2">Figuur <bdi class="figno">4</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
 </section>
+  <section id="metadata-mim-extension"><div class="header-wrapper"><h2 id="x3-metadata-mim-extension"><bdi class="secno">3. </bdi>Metadata MIM extension</h2><a class="self-link" href="#metadata-mim-extension" aria-label="Permalink for Section 3."></a></div>
+<p>Lineage information is considered as metadata in relation to elements in a productmodel. For this reason we consider lineage as metadata and will provide a common solution to relate metadata to semantics of a productmodel.</p>
+<section id="requirements"><div class="header-wrapper"><h3 id="x3-1-requirements"><bdi class="secno">3.1 </bdi>Requirements</h3><a class="self-link" href="#requirements" aria-label="Permalink for Section 3.1"></a></div>
+<p>The lineage model provides lineage information as metadata at the property level .</p>
+<p>Requirements of the metadata in this respect are the following:</p>
+<ol>
+<li>metadata at the property level of objecttypes</li>
+<li>metadata at the instance level of properties</li>
+<li>metadata can optionally be published</li>
+<li>metadata model does not have effect on a productmodel</li>
+</ol>
+<p>ad 1,2: UML-MIM does not have a construct to bind (meta)data at properties, i.e. attributes or association ends. It is therefore necessary to extend UML-MIM.</p>
+<p>ad 3,4: The metadata or in this case lineage model is modelled independently from the product model. Both are 'loosely' connected.</p>
+<p>An approach to these requirements can be found in the [<cite><a class="bibref" data-link-type="biblio" href="#bib-property-stereotype-for-metadata" title="Property Stereotype for Metadata">Property-Stereotype-for-Metadata</a></cite>]. This publication presents an UML extension through a stereotype <code>«propertyMetadata»</code> and a tagged value <code>metadataType</code>. An example is presented below.</p>
+<figure id="Figure_1">
+<img src="media/example_extension.png" alt="">
+<figcaption><a class="self-link" href="#Figure_1">Figuur <bdi class="figno">5</bdi></a> <span class="fig-title">Example showing use of stereotype: Properties with stereotype <code>«HasMetadata»</code> reference metadata types via tagged value <code>metadataType</code>. Source:[<cite><a class="bibref" data-link-type="biblio" href="#bib-property-stereotype-for-metadata" title="Property Stereotype for Metadata">Property-Stereotype-for-Metadata</a></cite>]</span></figcaption>
+</figure>
+
+
+<p>The above presented pattern is slightly adapted by changing the sterotype name from propertyMetadata to a general <code>«HasMetadata»</code>. The pattern is presented below on a general class AnyFeature representing any possible feature type in a productmodel.</p>
+<figure id="Figure_2">
+<img src="media/ProductmodelProxy.png" alt="">
+<figcaption><a class="self-link" href="#Figure_2">Figuur <bdi class="figno">6</bdi></a> <span class="fig-title">Metadata expressed at the conceptual level of a productmodel</span></figcaption>
+</figure>
+
+</section><section id="explanation-and-definition"><div class="header-wrapper"><h3 id="x3-2-explanation-and-definition"><bdi class="secno">3.2 </bdi>Explanation and definition</h3><a class="self-link" href="#explanation-and-definition" aria-label="Permalink for Section 3.2"></a></div>
+<p>Stereotype «HasMetadata»</p>
+<blockquote>
+<p>  <strong>Definition «HasMetadata»</strong><br>  This element has associated metadata.</p>
+</blockquote>
+<p>Description:
+The stereotype specifies that this information element has metadata associated. This is a specification at the conceptual level. A related tagged value <code>Metadata type</code> specifies the association to specific metadata.</p>
+<p>Tagged Value: Metadata type</p>
+<blockquote>
+<p>  <strong>Definition Metadata type</strong><br>  Name of the target class of associated metadata.</p>
+</blockquote>
+<p>Description:
+This tagged value specifies the relation to a specific target class of or in a specific metadata model. This target class serves as the receptor defining the type of metadata that is associated.</p>
+<p>In figure 2 the value for <code>Metadata type = GeorkestreerdGegeven</code> is only an example and may differ according to the required metadata class that relates to the specified metadata.</p>
+</section><section id="mim-uml-extension"><div class="header-wrapper"><h3 id="x3-3-mim-uml-extension"><bdi class="secno">3.3 </bdi>MIM-UML extension</h3><a class="self-link" href="#mim-uml-extension" aria-label="Permalink for Section 3.3"></a></div>
+<p>The defined stereotype and related tagged value lead to an extension of the MIM model. As the extension for now is independent from MIM the extension is described both as an extension of the UML metamodel and the MIM-UML model.</p>
+<p><strong>Extension on UML</strong></p>
+<figure id="Figure_3">
+<img src="media/UML extension.png" alt="">
+<figcaption><a class="self-link" href="#Figure_3">Figuur <bdi class="figno">7</bdi></a> <span class="fig-title">Stereotype <code>«HasMetadata»</code> as extension on UML metaclass Property</span></figcaption>
+</figure>
+
+<p>This UML profile is implemented in a EA MDG Technology named <a href="UML-profile/HasMetadata_mdg_build01.xml">HasMetadata_mdg</a>.</p>
+<p><strong>Extension on MIM-UML</strong></p>
+<figure id="Figure_4">
+<img src="" alt="">
+<figcaption><a class="self-link" href="#Figure_4">Figuur <bdi class="figno">8</bdi></a> <span class="fig-title">Todo: Stereotype <code>«HasMetadata»</code> as extension on MIM-UML metaclasses</span></figcaption>
+</figure>
+ 
+ 
+<p> <strong>Example of this Metadata profile applied in a MIM-UML model.</strong></p>
+ <figure id="Figure_5">
+<img src="media/Example_gebouw.png" alt="">
+<figcaption><a class="self-link" href="#Figure_5">Figuur <bdi class="figno">9</bdi></a> <span class="fig-title">Example of Stereotype <code>«HasMetadata»</code> applied in MIM-UML model</span></figcaption>
+</figure>
+
+</section><section id="implementation-encoding"><div class="header-wrapper"><h3 id="x3-4-implementation-encoding"><bdi class="secno">3.4 </bdi>Implementation, encoding</h3><a class="self-link" href="#implementation-encoding" aria-label="Permalink for Section 3.4"></a></div>
+<p>The challenges regarding the implementation of this conceptual metadata construct vary across different encoding formats. For example in XML a construct exists to add attributes to XML elements, which provides a means to give attributes to properties, in this case reference to a metadata object. In JSON this does not exist. The <code>«HasMetadata»</code> stereotype is therefore extended with a model transformation that objectifies properties of a productmodel. The objectified properties are not part of the productmodel but serve as a loosly coupled intermediate binding mechanism between data and metadata.</p>
+<p>The UML model of this pattern is presented below.</p>
+<figure id="Figure_6">
+<img src="media/Binding model.png" alt="">
+<figcaption><a class="self-link" href="#Figure_6">Figuur <bdi class="figno">10</bdi></a> <span class="fig-title">Pattern for the Metadata binding model. Objectification of properties.</span></figcaption>
+</figure>
+
+
+<p>Explanation of diagram.<br>The Metadata binding model serves as a objectification of the properties of the productmodel. Each property (attributes and association roles) is transfomed to an instance of the objecttype <code>GeorkestreerdGegeven</code> having its name in <code>propertyName</code>. Depending on the type of property (or its associated value type) a SimplePropertData, ComplexPropertyData or the AssociationPropertyData is chosen.
+SimplePropertyData for properties with a unstructured valuetypes, ComplexPropertyData for structured valuetypes and AssociationPropertyData for association roles.
+The value of a property is transformed to the <code>value</code> attribute or the <code>value</code> association role.</p>
+<p>In this model there is no explicit information link between a property and its value of the productmodel and its objectified <code>PropertyData</code> and value instance. To bind data of the productmodel to instances of 'PropertyData' is bij convention. The convention is that instances from objecttypes of the Productmodel and its properties and values by convention are bindend to instances of PropertyData and values in the Metadata Binding Model having the value for <code>propertName</code> and <code>value</code> equal to the name of the property and its value.<br>So without specifying specifically for the three subtypes of <code>GeorkestreerdGegeven</code> the convention rule is: <code>Productmodel.property = GeorkestreerdGegeven.propertyName AND Productmodel.property.value = GeorkestreerdGegeven.value</code></p>
+</section></section>
 
   <section id="conformance"><div class="header-wrapper"><h2 id="x4-conformiteit"><bdi class="secno">4. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 4."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
   <section id="tof"><div class="header-wrapper"><h2 id="x5-lijst-met-figuren"><bdi class="secno">5. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 5."></a></div><ul class="tof">
         <li class="tofline">
-    <a class="tocxref" href="#Figure_1"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title">Example showing use of stereotype: Properties with stereotype <code>«HasMetadata»</code> reference metadata types via tagged value <code>metadataType</code>. Source:[<cite><span class="bibref" data-link-type="biblio">Property-Stereotype-for-Metadata</span></cite>]</span></a>
+    <a class="tocxref" href="#fig-generatedID"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title"></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_2"><span class="self-link">Figuur <bdi class="figno">2</bdi></span> <span class="fig-title">Metadata expressed at the conceptual level of a productmodel</span></a>
+    <a class="tocxref" href="#fig-generatedID-0"><span class="self-link">Figuur <bdi class="figno">2</bdi></span> <span class="fig-title"></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_3"><span class="self-link">Figuur <bdi class="figno">3</bdi></span> <span class="fig-title">Stereotype <code>«HasMetadata»</code> as extension on UML metaclass Property</span></a>
+    <a class="tocxref" href="#fig-generatedID-1"><span class="self-link">Figuur <bdi class="figno">3</bdi></span> <span class="fig-title"></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_4"><span class="self-link">Figuur <bdi class="figno">4</bdi></span> <span class="fig-title">Todo: Stereotype <code>«HasMetadata»</code> as extension on MIM-UML metaclasses</span></a>
+    <a class="tocxref" href="#fig-generatedID-2"><span class="self-link">Figuur <bdi class="figno">4</bdi></span> <span class="fig-title"></span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_5"><span class="self-link">Figuur <bdi class="figno">5</bdi></span> <span class="fig-title">Example of Stereotype <code>«HasMetadata»</code> applied in MIM-UML model</span></a>
+    <a class="tocxref" href="#Figure_1"><span class="self-link">Figuur <bdi class="figno">5</bdi></span> <span class="fig-title">Example showing use of stereotype: Properties with stereotype <code>«HasMetadata»</code> reference metadata types via tagged value <code>metadataType</code>. Source:[<cite><span class="bibref" data-link-type="biblio">Property-Stereotype-for-Metadata</span></cite>]</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_6"><span class="self-link">Figuur <bdi class="figno">6</bdi></span> <span class="fig-title">Pattern for the Metadata binding model. Objectification of properties.</span></a>
+    <a class="tocxref" href="#Figure_2"><span class="self-link">Figuur <bdi class="figno">6</bdi></span> <span class="fig-title">Metadata expressed at the conceptual level of a productmodel</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID"><span class="self-link">Figuur <bdi class="figno">7</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#Figure_3"><span class="self-link">Figuur <bdi class="figno">7</bdi></span> <span class="fig-title">Stereotype <code>«HasMetadata»</code> as extension on UML metaclass Property</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-0"><span class="self-link">Figuur <bdi class="figno">8</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#Figure_4"><span class="self-link">Figuur <bdi class="figno">8</bdi></span> <span class="fig-title">Todo: Stereotype <code>«HasMetadata»</code> as extension on MIM-UML metaclasses</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-1"><span class="self-link">Figuur <bdi class="figno">9</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#Figure_5"><span class="self-link">Figuur <bdi class="figno">9</bdi></span> <span class="fig-title">Example of Stereotype <code>«HasMetadata»</code> applied in MIM-UML model</span></a>
+  </li><li class="tofline">
+    <a class="tocxref" href="#Figure_6"><span class="self-link">Figuur <bdi class="figno">10</bdi></span> <span class="fig-title">Pattern for the Metadata binding model. Objectification of properties.</span></a>
   </li>
       </ul></section>
   <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
     <div class="header-wrapper"><h3 id="a-1-begrippen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
     <ul class="index">
-    
+    <li>
+      <a class="index-term" href="#dfn-data-element">data element</a> 
+    <span class="print-only">§2.</span></li><li>
+      <a class="index-term" href="#dfn-object">object</a> 
+    <span class="print-only">§2.</span></li><li>
+      <a class="index-term" href="#dfn-property">property</a> 
+    <span class="print-only">§2.</span></li><li>
+      <a class="index-term" href="#dfn-subject">subject</a> 
+    <span class="print-only">§2.</span></li><li>
+      <a class="index-term" href="#dfn-value">value</a> 
+    <span class="print-only">§2.</span></li>
   </ul>
   </section><section id="index-defined-elsewhere">
     <div class="header-wrapper"><h3 id="a-2-begrippen-gedefinieerd-door-verwijzing"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
@@ -613,11 +618,69 @@ For the source data elements it is important to know which registry or dataset i
 <section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-referenties"><bdi class="secno">B. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="normatieve-referenties">
     <div class="header-wrapper"><h3 id="b-1-normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</h3><a class="self-link" href="#normatieve-referenties" aria-label="Permalink for Appendix B.1"></a></div>
     <dl class="bibliography"><dt id="bib-property-stereotype-for-metadata">[Property-Stereotype-for-Metadata]</dt><dd>
-      <em class="respec-offending-element">Reference not found.</em>
+      <a href="https://shapechange.net/wp-content/uploads/2019/12/UGAS19-D100_property_stereotypes.pdf"><cite>Property Stereotype for Metadata</cite></a>.  Publisher-1. V1.0. URL: <a href="https://shapechange.net/wp-content/uploads/2019/12/UGAS19-D100_property_stereotypes.pdf">https://shapechange.net/wp-content/uploads/2019/12/UGAS19-D100_property_stereotypes.pdf</a>
     </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
-  </p><script id="respec-dfn-panel">(() => {
+  </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-object" aria-label="Links in this document to definition: object">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-object" aria-label="Permalink for definition: object. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-data-element" aria-label="Links in this document to definition: data element">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-data-element" aria-label="Permalink for definition: data element. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-data-element-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-subject" aria-label="Links in this document to definition: subject">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-subject" aria-label="Permalink for definition: subject. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-subject-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-property" aria-label="Links in this document to definition: property">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-property" aria-label="Permalink for definition: property. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-property-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-value" aria-label="Links in this document to definition: value">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-value" aria-label="Permalink for definition: value. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-value-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
+  </li>
+  </ul>
+    </div><script id="respec-dfn-panel">(() => {
 // @ts-check
 if (document.respec) {
   document.respec.ready.then(setupPanel);
