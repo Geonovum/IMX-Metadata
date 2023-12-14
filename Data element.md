@@ -31,7 +31,10 @@ Or, in RDF:
 Each data element can have its own lineage; its own algorithm to determine the given value. By treating these data elements as objects; allows us to describe and provide information about them. For instance to state that `{ "plaatsnaam": "Apeldoorn" }` is derived from a data element in the BAG. 
 In the following diagram both the object and the data elements are modelled as an objecttype, as they are things; objects, we are interested in describing.
 
-![](media/level1.1.png)
+<figure id="Figure_1">
+<img src="media/level1.1.png" alt="">
+<figcaption>Data elements provide information about objects</figcaption>
+</figure>
 
 A data element is identified by it's 1) [=subject=] 2) [=value=] and 3) [=property=]
 e.g.
@@ -58,14 +61,23 @@ e.g.
 
 Several subtypes of data elements are identified; but these are omitted in the following examples for simplicity's sake.
 
-![](media/level1.2.png)
+<figure id="Figure_2">
+<img src="media/level1.2.png" alt="">
+<figcaption>Several types of data elements</figcaption>
+</figure>
 
 A data element can be described from different point of views. The perpective a lineage model would take is one of provenance. Questions to be answered include, for instance, where, how and by whom, is the statement `Building G0200.42b3d39246840268e0530a0a28492340 has construction date 2006` created? Other models could address other aspects of a data element; for instance whether it is subject to an examination of correctness (which could be relevant for the BAG: https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek) or what is the quality of a data element. 
 
 A data element is part of the information object describing an object; but this is omitted in the following examples.
 
-![](media/level1.3.png)
+<figure id="Figure_3">
+<img src="media/level1.3.png" alt="">
+<figcaption>A registration of an object consists of data elements</figcaption>
+</figure>
 
 This gives a basic model applicable for any usecase where metadata about data elements is of importance.
 
-![](media/Data%20element.png)
+<figure id="Figure_4">
+<img src="media/Data%20element.png" alt="">
+<figcaption>Basic model of object and related information by different type of data elements</figcaption>
+</figure>

@@ -37,20 +37,20 @@ The above presented pattern is slightly adapted by changing the sterotype name f
 # Explanation and definition
 
 Stereotype «HasMetadata»
->   **Definition «HasMetadata»**  
+>   **Definition <dfn>«HasMetadata»</dfn>**  
 >   This element has associated metadata.
 
 Description:
 The stereotype specifies that this information element has metadata associated. This is a specification at the conceptual level. A related tagged value `Metadata type` specifies the association to specific metadata.
 
 Tagged Value: Metadata type
->   **Definition Metadata type**  
+>   **Definition <dfn>Metadata type</dfn>**  
 >   Name of the target class of associated metadata.
 
 Description:
 This tagged value specifies the relation to a specific target class of or in a specific metadata model. This target class serves as the receptor defining the type of metadata that is associated.
 
-In figure 2 the value for `Metadata type = GeorkestreerdGegeven` is only an example and may differ according to the required metadata class that relates to the specified metadata.
+In figure 8 the value for `Metadata type = GeorkestreerdGegeven` is only an example and may differ according to the required metadata class that relates to the specified metadata.
 
 # MIM-UML extension
 
@@ -67,9 +67,11 @@ This UML profile is implemented in a EA MDG Technology named [HasMetadata_mdg](U
 
 **Extension on MIM-UML**
 
+The metadata information as related to properties in the context of MIM relates to several MIM metaclasses. The `«HasMetadata»` stereotype is defined as an extension on these MIM classes.
+
 <figure id="Figure_4">
-<img src="" alt="">
-<figcaption>Todo: Stereotype `«HasMetadata»` as extension on MIM-UML metaclasses</figcaption>
+<img src="media/MIM hasMetadata extensie.png" alt="">
+<figcaption>Stereotype `«HasMetadata»` as extension on MIM-UML metaclasses</figcaption>
 </figure>
  
  

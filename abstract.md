@@ -1,1 +1,1 @@
-TODO: vul in abstract.md een abstract in.
+Metadata provide information about data. To relate information at the property level of objects a model is created that objectifies the data elements that provide information about an object (a resource). This model is implemented as an extension on UML and on MIM. MIM metaclasses are extended with a construct to add metadata at the property level. 

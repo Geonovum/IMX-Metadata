@@ -12,15 +12,10 @@ Information modeller, API developer, IT architect.
 
 ### Introduction to document
 
-*Beschrijf hoe het document gelzezen moet worden, welke hoofdstukken voor wie bedoeld zijn, enz...*
 
 Chapter 2 - [Vocabulary](#vocabulary) introduces a conceptual model for data elements. Since this model describes how data van be described it is considered a metadatamodel.
 
 Chapter 3 - [Metadata MIM extension](#metadata-mim-extension) we will apply thhis vocabulary and introduce an extention to MIM that allows to connect a modelelement in an information model to a modelelement in a metadatamodel.
 
-### Working proces
-
-This document, lineage model, is developed in the WaU project .....
-The principal working method is agile development through several High5 sessions on use cases of increasing complex information content and ....
 
 
