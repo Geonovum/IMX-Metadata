@@ -1,11 +1,11 @@
 ## Metadata MIM extension
 
-Lineage information is considered as metadata in relation to elements in a productmodel. For this reason we consider lineage as metadata and will provide a common solution to relate metadata to semantics of a productmodel.
+For this extention a common solution to relate metadata to semantics of a logical model is provided.
 
 
 # Requirements
 
-The lineage model provides lineage information as metadata at the property level .
+The extention provides metadata at the property level.
 
 Requirements of the metadata in this respect are the following:
 
@@ -15,9 +15,9 @@ Requirements of the metadata in this respect are the following:
 4. metadata model does not have effect on a productmodel
 
 
-ad 1,2: UML-MIM does not have a construct to bind (meta)data at properties, i.e. attributes or association ends. It is therefore necessary to extend UML-MIM.
+ad 1,2: MIM-UML does not have a construct to bind (meta)data at properties, i.e. attributes or association ends. It is therefore necessary to extend MIM-UML.
 
-ad 3,4: The metadata or in this case lineage model is modelled independently from the product model. Both are 'loosely' connected.
+ad 3,4: The metadata is modelled independently from the productmodel. Both are 'loosely' connected.
 
 An approach to these requirements can be found in the [[Property-Stereotype-for-Metadata]]. This publication presents an UML extension through a stereotype `«propertyMetadata»` and a tagged value `metadataType`. An example is presented below.
 
@@ -27,9 +27,9 @@ An approach to these requirements can be found in the [[Property-Stereotype-for-
 </figure>
 
 
-The above presented pattern is slightly adapted by changing the sterotype name from propertyMetadata to a general `«HasMetadata»`. The pattern is presented below on a general class AnyFeature representing any possible feature type in a productmodel.
+The above presented pattern is slightly adapted by changing the stereotype name from propertyMetadata to a general `«HasMetadata»`. The pattern is presented below on a general class AnyFeature representing any possible feature type in a productmodel.
 
-<figure id="Figure_2">
+<figure id="ProductmodelProxy">
 <img src="media/ProductmodelProxy.png" alt="">
 <figcaption>Metadata expressed at the conceptual level of a productmodel</figcaption>
 </figure>
@@ -96,10 +96,10 @@ The UML model of this pattern is presented below.
 
 
 Explanation of diagram.  
-The Metadata binding model serves as a objectification of the properties of the productmodel. Each property (attributes and association roles) is transfomed to an instance of the objecttype `GeorkestreerdGegeven` having its name in `propertyName`. Depending on the type of property (or its associated value type) a SimplePropertData, ComplexPropertyData or the AssociationPropertyData is chosen.
-SimplePropertyData for properties with a unstructured valuetypes, ComplexPropertyData for structured valuetypes and AssociationPropertyData for association roles.
+The Metadata binding model serves as a objectification of the properties of the productmodel. Each property (attributes and association roles) is transfomed to an instance of the objecttype `OrchestratedDataItem` having it's name in `propertyName`. Depending on the type of property (or its associated value type) a SimpleDataItem, ComplexDataItem or the RelationDataItem is chosen.
+SimpleDataItem for properties with a unstructured valuetypes, ComplexDataItem for structured valuetypes and RelationDataItem for association roles.
 The value of a property is transformed to the `value` attribute or the `value` association role.
 
-In this model there is no explicit information link between a property and its value of the productmodel and its objectified `PropertyData` and value instance. To bind data of the productmodel to instances of 'PropertyData' is bij convention. The convention is that instances from objecttypes of the Productmodel and its properties and values by convention are bindend to instances of PropertyData and values in the Metadata Binding Model having the value for `propertName` and `value` equal to the name of the property and its value.  
-So without specifying specifically for the three subtypes of `GeorkestreerdGegeven` the convention rule is: `Productmodel.property = GeorkestreerdGegeven.propertyName AND Productmodel.property.value = GeorkestreerdGegeven.value`
+In this model there is no explicit information link between a property and its value of the productmodel and its objectified `Data item` and value instance. To bind data of the productmodel to instances of 'DataItem' is bij convention. The convention is that instances from objecttypes of the Productmodel and its properties and values by convention are bindend to instances of DataItem and values in the Metadata Binding Model having the value for `propertName` and `value` equal to the name of the property and its value.  
+Without specifying specifically for the three subtypes of `GeorkestreerdGegeven` the convention rule is: `Productmodel.property = DataItem.propertyName AND Productmodel.property.value = DataItem.value`
 

@@ -81,5 +81,13 @@ let respecConfig = {
         publisher:  "Publisher-1",
         company:    "Interactive Instruments",
     },
+    "MIM":
+      {
+        title:      "Metamodel Informatie Modellering",
+        href:       "https://docs.geostandaarden.nl/mim/def-st-mim-20220217/",
+        status:     "1.1.1",
+        publisher:  "Geonovum",
+        company:    "Geonovum",
+    },
   }
 };
