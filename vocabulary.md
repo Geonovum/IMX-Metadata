@@ -60,6 +60,14 @@ Several subtypes of data item are identified; but these are omitted in the follo
 <figcaption>Several types of data items</figcaption>
 </figure>
 
+<aside class="note" title="Data item vs. Data element">
+A data item is a distinct piece of data that describes an atomic state of a particular object concerning a specific property at a certain time point [[UDT]][[NTM]]. For example, the height of John Doe is a data item that describes a property of John Doe at a particular time.
+
+On the other hand, a <dfn>data element</dfn> is, generally, a concept forming part of a data model [[DCS]][[MIM]] . As an element of data representation, a collection of data elements forms a data structure. In [[ISO11179]] a data element is defined as `an <organization of data> unit of data that is considered in context to be indivisible. EXAMPLE The data element “age of a person” with values consisting of all combinations of 3 decimal digits.`. This may, however, also indicate a data item.
+
+In this specification we see the [=data element=] as the type of similar [=data item=]s.
+</aside>
+
 A data item can be described from different point of views. The perspective a lineage model would take is one of provenance. Questions to be answered include, for instance, where, how and by whom, data such as `Building G0200.42b3d39246840268e0530a0a28492340 has construction date 2006` are created. Other models could address other aspects of a data item; for instance whether it is subject to an examination of correctness (which could be relevant for the BAG: https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek) or what is the quality of a data item. 
 
 A data object is an information object consisting of a contextually grouped set of data items about a particular object. Data objects can be represented as table rows or database records.
