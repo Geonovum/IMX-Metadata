@@ -15,7 +15,7 @@ Requirements of the metadata in this respect are the following:
 4. metadata model does not have effect on a productmodel
 
 
-ad 1,2: MIM-UML does not have a construct to bind (meta)data at properties, i.e. attributes or association ends. It is therefore necessary to extend MIM-UML.
+ad 1,2: MIM-UML does not have a construct to bind (meta)data to properties, i.e. attributes or association ends. It is therefore necessary to extend MIM-UML.
 
 ad 3,4: The metadata is modelled independently from the productmodel. Both are 'loosely' connected.
 
@@ -96,10 +96,10 @@ The UML model of this pattern is presented below.
 
 
 Explanation of diagram.  
-The Metadata binding model serves as a objectification of the properties of the productmodel. Each property (attributes and association roles) is transfomed to an instance of the objecttype `OrchestratedDataItem` having it's name in `propertyName`. Depending on the type of property (or its associated value type) a SimpleDataItem, ComplexDataItem or the RelationDataItem is chosen.
+The Metadata binding model serves as a objectification of the properties of the productmodel. Each property (attributes and association roles) is transfomed to an instance of the objecttype `OrchestratedDataItem` having its name in as `propertyName` attribute. Depending on the type of property (or its associated value type) a SimpleDataItem, ComplexDataItem or the RelationDataItem is chosen.
 SimpleDataItem for properties with a unstructured valuetypes, ComplexDataItem for structured valuetypes and RelationDataItem for association roles.
 The value of a property is transformed to the `value` attribute or the `value` association role.
 
-In this model there is no explicit information link between a property and its value of the productmodel and its objectified `Data item` and value instance. To bind data of the productmodel to instances of 'DataItem' is bij convention. The convention is that instances from objecttypes of the Productmodel and its properties and values by convention are bindend to instances of DataItem and values in the Metadata Binding Model having the value for `propertName` and `value` equal to the name of the property and its value.  
+In this model there is no explicit information link between a property and its value of the productmodel and its objectified `Data item` instance. To bind data of the productmodel to instances of 'DataItem' is bij convention. The convention is that instances from objecttypes of the Productmodel and its properties and values by convention are bindend to instances of DataItem and values in the Metadata Binding Model having the value for `propertName` and `value` equal to the name of the property and its value.  
 Without specifying specifically for the three subtypes of `GeorkestreerdGegeven` the convention rule is: `Productmodel.property = DataItem.propertyName AND Productmodel.property.value = DataItem.value`
 
