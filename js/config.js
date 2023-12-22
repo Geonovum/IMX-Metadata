@@ -1,6 +1,8 @@
 let respecConfig = {
   useLogo: true,
   useLabel: true,
+  preProcess: [loadTurtle],
+  pluralize: true,
   // title is verplicht! Neem hier de titel van het document op ----------------------
   title: "IMX - Metadata basic principles",
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
