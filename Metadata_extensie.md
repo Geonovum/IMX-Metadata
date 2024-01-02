@@ -84,7 +84,7 @@ The metadata information as related to properties in the context of MIM relates 
 
 # Implementation, encoding
 
-The challenges regarding the implementation of this conceptual metadata construct vary across different encoding formats. For example in XML a construct exists to add attributes to XML elements, which provides a means to give attributes to properties, in this case reference to a metadata object. In JSON this does not exist. The `«HasMetadata»` stereotype is therefore extended with a model transformation that objectifies properties of a productmodel. The objectified properties are not part of the productmodel but serve as a loosly coupled intermediate binding mechanism between data and metadata.
+The challenges regarding the implementation of this conceptual metadata construct vary across different encoding formats. For example in XML a construct exists to add attributes to XML elements, which provides a means to give attributes to properties, in this case reference to a metadata object. In JSON this does not exist. The `«HasMetadata»` stereotype is therefore extended with a model transformation that objectifies properties of a productmodel. The objectified properties are not part of the productmodel but serve as a loosely coupled intermediate binding mechanism between data and metadata.
 
 The UML model of this pattern is presented below.
 
@@ -96,9 +96,11 @@ The UML model of this pattern is presented below.
 
 
 Explanation of diagram.  
-The Metadata binding model serves as a objectification of the properties of the productmodel. Each property (attributes and association roles) is transfomed to an instance of the objecttype `GeorkestreerdGegeven` having its name in `propertyName`. Depending on the type of property (or its associated value type) a SimplePropertData, ComplexPropertyData or the AssociationPropertyData is chosen.
+The Metadata binding model serves as an objectification of the properties of the productmodel. Each property (attributes and association roles) is transfomed to an instance of the objecttype `GeorkestreerdGegeven` having its name in `propertyName`. Depending on the type of property (or its associated value type) a SimplePropertData, ComplexPropertyData or the AssociationPropertyData is chosen.
 SimplePropertyData for properties with a unstructured valuetypes, ComplexPropertyData for structured valuetypes and AssociationPropertyData for association roles.
 The value of a property is transformed to the `value` attribute or the `value` association role.
+
+The related lineage information is represented by the LineageClass. This class is not further described but is the entry to a complete lineage model. Also a more general metadata class could have been connected to represent any metadata.
 
 In this model there is no explicit information link between a property and its value of the productmodel and its objectified `PropertyData` and value instance. To bind data of the productmodel to instances of 'PropertyData' is bij convention. The convention is that instances from objecttypes of the Productmodel and its properties and values by convention are bindend to instances of PropertyData and values in the Metadata Binding Model having the value for `propertName` and `value` equal to the name of the property and its value.  
 So without specifying specifically for the three subtypes of `GeorkestreerdGegeven` the convention rule is: `Productmodel.property = GeorkestreerdGegeven.propertyName AND Productmodel.property.value = GeorkestreerdGegeven.value`

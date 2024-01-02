@@ -4,7 +4,7 @@ Kadaster and Geonovum are developing a mechanism to facilitate the semantic inte
 
 Data retrieval is according to the information model of the semantic layer. Data retrieval will optionally include metadata about the lineage (provenance) of each singular piece of information about a resource.
 
-This document describes a proposed standard for describing data elements.
+This document describes a proposed standard for describing the metadata of data elements.
 
 ### Target audience
 
@@ -13,9 +13,9 @@ Information modeller, API developer, IT architect.
 ### Introduction to document
 
 
-Chapter 2 - [Vocabulary](#vocabulary) introduces a conceptual model for data elements. Since this model describes how data van be described it is considered a metadatamodel.
+Chapter 2 - [Vocabulary](#vocabulary) introduces a conceptual model for data elements. Since this model describes how data can be described it is considered a metadatamodel.
 
-Chapter 3 - [Metadata MIM extension](#metadata-mim-extension) we will apply this vocabulary and introduce an extension to MIM that allows to connect a modelelement in an information model to a modelelement in a metadatamodel.
+Chapter 3 - [Metadata MIM extension](#metadata-mim-extension) applies this vocabulary and introduces an extension to MIM that allows to connect a modelelement in an information model to a modelelement in a metadatamodel.
 
 
 

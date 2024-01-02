@@ -59,25 +59,31 @@ e.g.
 | <dfn>property</dfn>     | A property is the characteristic of the subject a data element is about. |
 | <dfn>value</dfn>        | The value of a data element.                                             |
 
-Several subtypes of data elements are identified; but these are omitted in the following examples for simplicity's sake.
-
-<figure id="Figure_2">
-<img src="media/level1.2.png" alt="">
-<figcaption>Several types of data elements</figcaption>
-</figure>
-
-A data element can be described from different point of views. The perpective a lineage model would take is one of provenance. Questions to be answered include, for instance, where, how and by whom, is the statement `Building G0200.42b3d39246840268e0530a0a28492340 has construction date 2006` created? Other models could address other aspects of a data element; for instance whether it is subject to an examination of correctness (which could be relevant for the BAG: https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek) or what is the quality of a data element. 
-
-A data element is part of the information object describing an object; but this is omitted in the following examples.
+A data element is part of the information object describing an object.
 
 <figure id="Figure_3">
 <img src="media/level1.3.png" alt="">
 <figcaption>A registration of an object consists of data elements</figcaption>
 </figure>
 
+
+Several subtypes of data elements are identified: a simple data element with a simple value, a complex data element having a structure combining data elements and a relation data element that references a target object.
+
+<figure id="Figure_2">
+<img src="media/level1.2.png" alt="">
+<figcaption>Several types of data elements</figcaption>
+</figure>
+
+Now that the data element is objectified metadata can be related.
+
+A data element can be described from different points of view. The view a lineage model would take is one of provenance. Questions to be answered include, for instance, where, how and by whom, is the statement `Building G0200.42b3d39246840268e0530a0a28492340 has construction date 2006` created? Other models could address other aspects of a data element; for instance whether it is subject to an examination of correctness (which could be relevant for the BAG: https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek) or what is the quality of a data element. 
+
+The next chapter will define a modelling construct that allows for connecting metadata at the property level of a productmodel.
+
+<!--
 This gives a basic model applicable for any usecase where metadata about data elements is of importance.
 
 <figure id="Figure_4">
 <img src="media/Data%20element.png" alt="">
 <figcaption>Basic model of object and related information by different type of data elements</figcaption>
-</figure>
+</figure> -->
