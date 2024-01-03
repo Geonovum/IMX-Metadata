@@ -14,4 +14,4 @@ Information modeller, API developer, IT architect.
 
 Chapter [[[#vocabulary]]] introduces a conceptual model for data items. Since this model describes how data can be described it is considered a metadata model.
 
-In chapter [[[#metadata-mim-extension]]] we will apply this vocabulary and introduce an extension to [[MIM]] that allows to connect a model element in an information model to a model element in a metadata model.
+In chapter [[[#metadata-mim-extension]]] this vocabulary is applied and an extension to [[MIM]] that allows to connect a model element in an information model to a model element in a metadata model is introduced.
