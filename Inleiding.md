@@ -1,10 +1,10 @@
 ## Introduction
 
-Kadaster and Geonovum are developing a mechanism to facilitate the semantic integration of decentralized data registers. A central API operates on an integrated semantic layer. The semantic layer constitutes of a coherent information model integrating several domain specific domain models. An API orchestration layer directs data communication to and from existing data registries.
+Kadaster and Geonovum are developing a mechanism to facilitate the semantic integration of decentralized data registers. A central API operates on an integrated semantic layer. The semantic layer consists of a coherent information model integrating several domain-specific domain models. An API orchestration layer directs data communication to and from existing data registries.
 
-Data retrieval is according to the information model of the semantic layer. Data retrieval will optionally include metadata about the lineage (provenance) of each singular piece of information about a resource.
+The data retrieval schema is in accordance with the logical data model of the semantic layer. Data retrieval will optionally include metadata about the lineage (provenance) of each singular piece of data about a resource.
 
-This document describes a proposed standard for describing data elements.
+This document describes a proposed standard for describing [=data items=].
 
 ### Target audience
 
@@ -12,15 +12,6 @@ Information modeller, API developer, IT architect.
 
 ### Introduction to document
 
-*Beschrijf hoe het document gelzezen moet worden, welke hoofdstukken voor wie bedoeld zijn, enz...*
+Chapter [[[#vocabulary]]] introduces a conceptual model for data items. Since this model describes how data can be described it is considered a metadata model.
 
-Chapter 2 - [Vocabulary](#vocabulary) introduces a conceptual model for data elements. Since this model describes how data van be described it is considered a metadatamodel.
-
-Chapter 3 - [Metadata MIM extension](#metadata-mim-extension) we will apply thhis vocabulary and introduce an extention to MIM that allows to connect a modelelement in an information model to a modelelement in a metadatamodel.
-
-### Working proces
-
-This document, lineage model, is developed in the WaU project .....
-The principal working method is agile development through several High5 sessions on use cases of increasing complex information content and ....
-
-
+In chapter [[[#metadata-mim-extension]]] this vocabulary is applied and an extension to [[MIM]] that allows to connect a model element in an information model to a model element in a metadata model is introduced.

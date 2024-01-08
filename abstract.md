@@ -1,1 +1,1 @@
-TODO: vul in abstract.md een abstract in.
+"Metadata provide information about data. To relate information at the property level of objects a vocabulary is created that supports this. This model objectifies data about a specific property of an object. The vocabulary is implemented as an extension on UML and on MIM-UML. 
