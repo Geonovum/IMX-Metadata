@@ -29,7 +29,7 @@ let respecConfig = {
   //licence: "cc0",                 // Public Domain Dedication
   licence: "cc-by",                 // Attribution, met bronvermelding
   //-- shortName is verplicht! (komt in de URL: kies logische afkorting)--------------
-  shortName: "IMX-Metadata",
+  shortName: "Metadata",
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
   publishDate: "2024-01-08",
