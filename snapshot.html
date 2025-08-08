@@ -1,16 +1,29 @@
-<!DOCTYPE html><html lang="nl"><head>
+<!DOCTYPE html><html lang="en"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 34.1.1">
+<meta name="generator" content="ReSpec 35.3.0">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
+.warning{border-color:#f11;border-color:var(--warning-border,#f11);border-width:.2em;border-style:solid;background:#fbe9e9;background:var(--warning-bg,#fbe9e9);color:#000;color:var(--text,#000)}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
 <style>
 dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
-.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
-.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
 .dfn-panel *{margin:0}
-.dfn-panel b{display:block;color:#000;margin-top:.25em}
-.dfn-panel ul a[href]{color:#333}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
 .dfn-panel>div{display:flex}
 .dfn-panel a.self-link{font-weight:700;margin-right:auto}
 .dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
@@ -29,8 +42,9 @@ dfn{cursor:pointer}
   
   
   
+  
 <script>document.title = respecConfig.title</script>
-<title>WaU - Metadata basic principles</title>
+<title>IMX - Metadata basic principles</title>
   
 <title>Default</title>
   
@@ -43,8 +57,6 @@ dfn{cursor:pointer}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -55,23 +67,11 @@ a.bibref{text-decoration:none}
 .respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
 }
 #references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
-cite .bibref{font-style:normal}
+cite .bibref{font-style:italic}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
-a .figno,a .secno{color:#000}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -94,6 +94,10 @@ dd{margin-left:0}
 .removeOnSave{display:none}
 }
 </style>
+<style id="respec-nlgov">
+img.license{float:left;padding-right:5px;background:0 0}
+</style>
+<meta name="color-scheme" content="light">
 <style>
 ul.index{columns:30ch;column-gap:1.5em}
 ul.index li{list-style:inherit}
@@ -105,23 +109,39 @@ ul.index code{color:inherit}
 #index-defined-here .print-only{display:initial}
 }
 </style>
-<meta name="description" content="TODO: vul in abstract.md een abstract in.">
+<meta name="description" content="&quot;Metadata provide information about data. To relate information at the property level of objects a vocabulary is created that supports this. This model objectifies data about a specific property of an object. The vocabulary is implemented as an extension on UML and on MIM-UML.">
 <style>
-.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
-.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
-.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
-.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
-.hljs-literal{color:#0b76c5}
-.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
-.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
-.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
-.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
+.hljs{--base:#fafafa;--mono-1:#383a42;--mono-2:#686b77;--mono-3:#717277;--hue-1:#0b76c5;--hue-2:#336ae3;--hue-3:#a626a4;--hue-4:#42803c;--hue-5:#ca4706;--hue-5-2:#c91243;--hue-6:#986801;--hue-6-2:#9a6a01}
+@media (prefers-color-scheme:dark){
+.hljs{--base:#282c34;--mono-1:#abb2bf;--mono-2:#818896;--mono-3:#5c6370;--hue-1:#56b6c2;--hue-2:#61aeee;--hue-3:#c678dd;--hue-4:#98c379;--hue-5:#e06c75;--hue-5-2:#be5046;--hue-6:#d19a66;--hue-6-2:#e6c07b}
+}
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;color:var(--mono-1,#383a42);background:#fafafa;background:var(--base,#fafafa)}
+.hljs-comment,.hljs-quote{color:#717277;color:var(--mono-3,#717277);font-style:italic}
+.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4;color:var(--hue-3,#a626a4)}
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;color:var(--hue-5,#ca4706);font-weight:700}
+.hljs-literal{color:#0b76c5;color:var(--hue-1,#0b76c5)}
+.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c;color:var(--hue-4,#42803c)}
+.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01;color:var(--hue-6-2,#9a6a01)}
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801;color:var(--hue-6,#986801)}
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3;color:var(--hue-2,#336ae3)}
 .hljs-emphasis{font-style:italic}
 .hljs-strong{font-weight:700}
 .hljs-link{text-decoration:underline}
 </style>
 <style>
-.sidelabel{position:fixed;-webkit-transform-origin:top right;right:100%;top:0;-webkit-transform:rotate(-90deg);padding:4px 50px 4px 10px;color:#fff;white-space:nowrap;z-index:1}
+
+  .sidelabel {
+    position: fixed;
+    -webkit-transform-origin: top right;
+    right: 100%;
+    top: 0;
+    -webkit-transform: rotate(-90deg);
+    padding: 4px 50px 4px 10px;
+    color: white;
+    white-space: nowrap;
+    z-index: 1;
+    background-color: #FF0000;
+  }
 </style>
 <script type="text/javascript">
    /* Any custom mermaid.js scripts will go here. */
@@ -133,6 +153,7 @@ ul.index code{color:inherit}
 </style>
 <script id="initialUserConfig" type="application/json">{
   "nl_organisationName": "Geonovum",
+  "nl_organisationStylesURL": "https://tools.geostandaarden.nl/respec/style/",
   "nl_organisationPublishURL": "https://docs.geostandaarden.nl/",
   "logos": [
     {
@@ -146,11 +167,6 @@ ul.index code{color:inherit}
   ],
   "postProcess": [
     null
-  ],
-  "edDraftURI": [
-    "https://geonovum.github.io",
-    "/",
-    "shortName"
   ],
   "latestVersion": [
     "nl_organisationPublishURL",
@@ -193,13 +209,14 @@ ul.index code{color:inherit}
       "cv": "Candidate recommendation",
       "vv": "Proposed recommendation",
       "def": "Recommendation",
+      "ld": "Living document",
       "basis": "Document",
       "no": "Norm",
       "st": "Standard",
       "im": "Information model",
       "pr": "Practical guideline",
       "hr": "Guide",
-      "wa": "Werkafspraak",
+      "wa": "Work process agreement",
       "al": "General",
       "bd": "Governance documentation",
       "bp": "Best practice"
@@ -209,6 +226,7 @@ ul.index code{color:inherit}
       "cv": "Consultatieversie",
       "vv": "Versie ter vaststelling",
       "def": "Vastgestelde versie",
+      "ld": "Levend document",
       "basis": "Document",
       "no": "Norm",
       "st": "Standaard",
@@ -219,46 +237,6 @@ ul.index code{color:inherit}
       "al": "Algemeen",
       "bd": "Beheerdocumentatie",
       "bp": "Best practice"
-    }
-  },
-  "specTypeText": {
-    "en": {
-      "no": "Norm",
-      "st": "Standard",
-      "im": "Information model",
-      "pr": "Guideline",
-      "hr": "Guide",
-      "wa": "Werkafspraak",
-      "al": "General",
-      "bd": "Governance documentation",
-      "bp": "Best practice"
-    },
-    "nl": {
-      "no": "Norm",
-      "st": "Standaard",
-      "im": "Informatiemodel",
-      "pr": "Praktijkrichtlijn",
-      "hr": "Handreiking",
-      "wa": "Werkafspraak",
-      "al": "Algemeen",
-      "bd": "Beheerdocumentatie",
-      "bp": "Best practice"
-    }
-  },
-  "specStatusText": {
-    "en": {
-      "wv": "Editor's draft",
-      "cv": "Candidate recommendation",
-      "vv": "Proposed recommendation",
-      "def": "Recommendation",
-      "basis": "Document"
-    },
-    "nl": {
-      "wv": "Werkversie",
-      "cv": "Consultatieversie",
-      "vv": "Versie ter vaststelling",
-      "def": "Vastgestelde versie",
-      "basis": "Document"
     }
   },
   "sotdText": {
@@ -266,17 +244,19 @@ ul.index code{color:inherit}
       "sotd": "Status van dit document",
       "def": "Dit is de definitieve versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
       "wv": "Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.",
-      "cv": "Dit is een consultatieversie. Commentaar over dit document kan gestuurd worden naar ",
+      "cv": "Dit is een consultatieversie.",
       "vv": "Dit is de definitieve conceptversie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
-      "basis": "Dit is een document zonder officiële status."
+      "basis": "Dit is een document zonder officiële status.",
+      "ld": "Dit is een levend document dat regelmatig gewijzigd wordt."
     },
     "en": {
       "sotd": "Status of this document",
       "def": "This is the definitive version of this document. Edits resulting from consultations have been applied.",
       "wv": "This is a working draft that can be changed, removed or replaced by other documents at any time. It is not a stable document.",
-      "cv": "This is a stable draft, published for public comment. Comments regarding this document may be sent to ",
+      "cv": "This is a stable draft, published for public comment.",
       "vv": "This is the final draft of this document. Edits resulting from consultations have been applied.",
-      "basis": "This document has no official standing."
+      "basis": "This document has no official standing.",
+      "ld": "This is a living document, which is updated regularly."
     }
   },
   "labelColor": {
@@ -284,7 +264,8 @@ ul.index code{color:inherit}
     "wv": "#FF0000",
     "cv": "#045D9F",
     "vv": "#045D9F",
-    "basis": "#80CC28"
+    "basis": "#80CC28",
+    "ld": "#80CC28"
   },
   "licenses": {
     "cc0": {
@@ -314,14 +295,57 @@ ul.index code{color:inherit}
       "publisher": "Publisher-1",
       "company": "Interactive Instruments",
       "id": "property-stereotype-for-metadata"
+    },
+    "MIM": {
+      "title": "Metamodel Informatie Modellering",
+      "href": "https://docs.geostandaarden.nl/mim/def-st-mim-20220217/",
+      "status": "1.1.1",
+      "publisher": "Geonovum",
+      "company": "Geonovum",
+      "id": "mim"
+    },
+    "ISO11179": {
+      "date": "2023-01",
+      "title": "ISO/IEC 11179-3",
+      "href": "https://www.iso.org/standard/78915.html",
+      "publisher": "International Organization for Standardization (ISO)",
+      "status": "Published",
+      "id": "iso11179"
+    },
+    "UDT": {
+      "title": "Unified database theory",
+      "href": "https://www.odaba.com/content/downloads/documentation/P1_UnifiedDatabaseTheory.pdf",
+      "publisher": "International Organization for Standardization (ISO)",
+      "status": "Published",
+      "id": "udt"
+    },
+    "NTM": {
+      "title": "Neuchâtel Terminology Model PART II: Variables and related concepts",
+      "href": "https://web.archive.org/web/20120305234809/http://www1.unece.org/stat/platform/download/attachments/14319930/Neuchatel+Model+V1.pdf?version=1",
+      "status": "Published",
+      "id": "ntm"
+    },
+    "DCS": {
+      "date": "2020-09",
+      "title": "Data Concept System for Data Quality Dimensions",
+      "href": "https://www.dama-nl.org/wp-content/uploads/2020/09/DCS-Data-Concept-System-DDQ-Research-Paper-version-1.2-d.d.-3-Sept-2020.pdf",
+      "status": "Published",
+      "publisher": "DAMA NL",
+      "id": "dcs"
     }
   },
-  "title": "WaU - Metadata basic principles",
+  "preProcess": [
+    null
+  ],
+  "pluralize": true,
+  "title": "IMX - Metadata basic principles",
   "specStatus": "wv",
   "specType": "HR",
-  "pubDomain": "dk",
+  "pubDomain": "IMX",
   "licence": "cc-by",
-  "shortName": "WaU-Metadata",
+  "shortName": "Metadata",
+  "previousPublishDate": "2024-05-01",
+  "previousMaturity": "VV",
   "editors": [
     {
       "name": "Paul Janssen",
@@ -334,9 +358,14 @@ ul.index code{color:inherit}
       "name": "Jesse Bakker",
       "company": "Kadaster",
       "companyURL": "https://www.kadaster.nl"
+    },
+    {
+      "name": "Paul Janssen",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
     }
   ],
-  "github": "https://github.com/Geonovum/NL-ReSpec-GN-template",
+  "github": "https://github.com/Geonovum/IMX-Metadata/",
   "alternateFormats": [
     {
       "label": "pdf",
@@ -344,117 +373,142 @@ ul.index code{color:inherit}
     }
   ]
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
+<link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/base.css"></head>
 
-<body class="h-entry toc-inline"><div class="head">
+<body class="h-entry informative"><div class="head">
     <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132">
-  </a> <h1 id="title" class="title">WaU - Metadata basic principles</h1>
+  </a> <h1 id="title" class="title">IMX - Metadata basic principles</h1>
     
     <h2>
-      Geonovum Handreiking<br>
-      Werkversie
-      <time class="dt-published" datetime="2023-06-19">19 juni 2023</time>
+      Geonovum Guide<br>
+      Editor's draft
+      <time class="dt-published" datetime="2025-08-08">August 08, 2025</time>
     </h2>
     <dl>
       
-      <dt>Laatst gepubliceerde versie:</dt><dd>
-              <a href="https://docs.geostandaarden.nl/dk/wau-metadata/">https://docs.geostandaarden.nl/dk/wau-metadata/</a>
-            </dd>
+      
+      <dt>Latest editor's draft:</dt><dd><a href="https://geonovum.github.io/IMX-Metadata/">https://geonovum.github.io/IMX-Metadata/</a></dd>
       
       
       
       
       
-      
-      <dt>Redacteur:</dt>
+      <dt>Editor:</dt>
       <dd class="editor p-author h-card vcard">
     <span class="p-name fn">Paul Janssen</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
       
-      <dt>Auteur:</dt><dd class="editor p-author h-card vcard">
+      <dt>Authors:</dt><dd class="editor p-author h-card vcard">
     <span class="p-name fn">Jesse Bakker</span> (<a class="p-org org h-org" href="https://www.kadaster.nl">Kadaster</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Paul Janssen</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
-      <dt>Doe mee:</dt><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/">GitHub Geonovum/NL-ReSpec-GN-template</a>
+      <dt>Participate:</dt><dd>
+    <a href="https://github.com/Geonovum/IMX-Metadata/">GitHub Geonovum/IMX-Metadata</a>
   </dd><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/issues/">Dien een melding in</a>
+    <a href="https://github.com/Geonovum/IMX-Metadata/issues/">File an issue</a>
   </dd><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/commits/">Revisiehistorie</a>
+    <a href="https://github.com/Geonovum/IMX-Metadata/commits/">Commit history</a>
   </dd><dd>
-    <a href="https://github.com/Geonovum/NL-ReSpec-GN-template/pulls/">Pull requests</a>
+    <a href="https://github.com/Geonovum/IMX-Metadata/pulls/">Pull requests</a>
   </dd>
     </dl>
     
     
     <p>
-          Dit document is ook beschikbaar in dit niet-normatieve formaat:
+          This document is also available in these non-normative format:
           <a rel="alternate" href="template.pdf">pdf</a>
         </p>
     <p class="copyright">
-          Dit document valt onder de volgende licentie: 
-          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img style="float: left; padding-right: 5px;" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
-        </p>
+            This document is licensed under 
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
+          </p>
     <hr title="Separator for header">
   </div>
-  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>TODO: vul in abstract.md een abstract in.</p>
+  <section id="abstract" class="introductory"><h2>Abstract</h2><p>"Metadata provide information about data. To relate information at the property level of objects a vocabulary is created that supports this. This model objectifies data about a specific property of an object. The vocabulary is implemented as an extension on UML and on MIM-UML.</p>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target audience</a></li><li class="tocline"><a class="tocxref" href="#introduction-to-document"><bdi class="secno">1.2 </bdi>Introduction to document</a></li><li class="tocline"><a class="tocxref" href="#working-proces"><bdi class="secno">1.3 </bdi>Working proces</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vocabulary"><bdi class="secno">2. </bdi>Vocabulary</a></li><li class="tocline"><a class="tocxref" href="#metadata-mim-extension"><bdi class="secno">3. </bdi>Metadata MIM extension</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">3.1 </bdi>Requirements</a></li><li class="tocline"><a class="tocxref" href="#explanation-and-definition"><bdi class="secno">3.2 </bdi>Explanation and definition</a></li><li class="tocline"><a class="tocxref" href="#mim-uml-extension"><bdi class="secno">3.3 </bdi>MIM-UML extension</a></li><li class="tocline"><a class="tocxref" href="#implementation-encoding"><bdi class="secno">3.4 </bdi>Implementation, encoding</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">4. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">5. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status of this document</h2><p>This is a working draft that can be changed, removed or replaced by other documents at any time. It is not a stable document.</p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of this document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target audience</a></li><li class="tocline"><a class="tocxref" href="#introduction-to-document"><bdi class="secno">1.2 </bdi>Introduction to document</a></li></ol></li><li class="tocline"><a class="tocxref" href="#vocabulary"><bdi class="secno">2. </bdi>Vocabulary</a></li><li class="tocline"><a class="tocxref" href="#metadata-mim-extension"><bdi class="secno">3. </bdi>Metadata MIM extension</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">3.1 </bdi>Requirements</a></li><li class="tocline"><a class="tocxref" href="#explanation-and-definition"><bdi class="secno">3.2 </bdi>Explanation and definition</a></li><li class="tocline"><a class="tocxref" href="#mim-uml-extension"><bdi class="secno">3.3 </bdi>MIM-UML extension</a></li><li class="tocline"><a class="tocxref" href="#implementation-encoding"><bdi class="secno">3.4 </bdi>Implementation, encoding</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">4. </bdi>List of Figures</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Terms defined by this specification</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Terms defined by reference</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 
   
-  <section class="informative" id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
-<p>Kadaster and Geonovum are developing a mechanism to facilitate the semantic integration of decentralized data registers. A central API operates on an integrated semantic layer. The semantic layer constitutes of a coherent information model integrating several domain specific domain models. An API orchestration layer directs data communication to and from existing data registries.</p>
-<p>Data retrieval is according to the information model of the semantic layer. Data retrieval will optionally include metadata about the lineage (provenance) of each singular piece of information about a resource.</p>
-<p>This document describes a proposed standard for describing data elements.</p>
+  <section id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div>
+<p>Kadaster and Geonovum are developing a mechanism to facilitate the semantic integration of decentralized data registers. A central API operates on an integrated semantic layer. The semantic layer consists of a coherent information model integrating several domain-specific domain models. An API orchestration layer directs data communication to and from existing data registries.</p>
+<p>The data retrieval schema is in accordance with the logical data model of the semantic layer. Data retrieval will optionally include metadata about the lineage (provenance) of each singular piece of data about a resource.</p>
+<p>This document describes a proposed standard for describing <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-1">data items</a>.</p>
 <section id="target-audience"><div class="header-wrapper"><h3 id="x1-1-target-audience"><bdi class="secno">1.1 </bdi>Target audience</h3><a class="self-link" href="#target-audience" aria-label="Permalink for Section 1.1"></a></div>
 <p>Information modeller, API developer, IT architect.</p>
 </section><section id="introduction-to-document"><div class="header-wrapper"><h3 id="x1-2-introduction-to-document"><bdi class="secno">1.2 </bdi>Introduction to document</h3><a class="self-link" href="#introduction-to-document" aria-label="Permalink for Section 1.2"></a></div>
-<p><em>Beschrijf hoe het document gelzezen moet worden, welke hoofdstukken voor wie bedoeld zijn, enz...</em></p>
-<p>Chapter 2 - <a href="#vocabulary">Vocabulary</a> introduces a conceptual model for data elements. Since this model describes how data van be described it is considered a metadatamodel.</p>
-<p>Chapter 3 - <a href="#metadata-mim-extension">Metadata MIM extension</a> we will apply thhis vocabulary and introduce an extention to MIM that allows to connect a modelelement in an information model to a modelelement in a metadatamodel.</p>
-</section><section id="working-proces"><div class="header-wrapper"><h3 id="x1-3-working-proces"><bdi class="secno">1.3 </bdi>Working proces</h3><a class="self-link" href="#working-proces" aria-label="Permalink for Section 1.3"></a></div>
-<p>This document, lineage model, is developed in the WaU project .....
-The principal working method is agile development through several High5 sessions on use cases of increasing complex information content and ....</p>
+<p>Chapter <a href="#vocabulary" data-matched-text="[[[#vocabulary]]]" class="sec-ref"><bdi class="secno">2. </bdi>Vocabulary</a> introduces a conceptual model for data items. Since this model describes how data can be described it is considered a metadata model.</p>
+<p>In chapter <a href="#metadata-mim-extension" data-matched-text="[[[#metadata-mim-extension]]]" class="sec-ref"><bdi class="secno">3. </bdi>Metadata MIM extension</a> this vocabulary is applied and an extension to [<cite><a class="bibref" data-link-type="biblio" href="#bib-mim" title="Metamodel Informatie Modellering">MIM</a></cite>] that allows to connect a model element in an information model to a model element in a metadata model is introduced.</p>
 </section></section>
+  
   <section id="vocabulary"><div class="header-wrapper"><h2 id="x2-vocabulary"><bdi class="secno">2. </bdi>Vocabulary</h2><a class="self-link" href="#vocabulary" aria-label="Permalink for Section 2."></a></div>
-<p>In order to provide metadata about any singular piece of information about a resource, we need to be able to talk about it and in turn capture data about it. The first notion we therefore introduce is the <a data-link-type="dfn|abstract-op" href="#dfn-data-element" class="internalDFN" id="ref-for-dfn-data-element-1">data element</a>. Information objects we consume to draw insights from or base decisions on are comprised out of multiple atomic units of information, each captured by one attribute or association. Consider the following information object in JSON:</p>
-<pre aria-busy="false"><code class="hljs json">{
-  <span class="hljs-attr">"omschrijving"</span>: <span class="hljs-string">"Laan van Westenenk 701, 7334DP Apeldoorn"</span>,
-  <span class="hljs-attr">"plaatsnaam"</span>: <span class="hljs-string">"Apeldoorn"</span>,
-  <span class="hljs-attr">"identificatie"</span>: <span class="hljs-string">"0200200000075716"</span>,
-  <span class="hljs-attr">"isHoofdadres"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"huisnummer"</span>: <span class="hljs-number">701</span>,
-  <span class="hljs-attr">"postcode"</span>: <span class="hljs-string">"7334DP"</span>,
-  <span class="hljs-attr">"straatnaam"</span>: <span class="hljs-string">"Laan van Westenenk"</span>
-}</code></pre>
-
-<p>Or, in RDF:</p>
-<pre aria-busy="false"><code class="hljs css">&lt;http://example.com/id/adres/<span class="hljs-number">0200200000075716</span>&gt; a gebouw:Adres;
-  gebouw:postcode <span class="hljs-string">"7334DP"</span>;
-  gebouw:huisnummer <span class="hljs-number">701</span>;
-  gebouw:identificatie <span class="hljs-string">"0200200000075716"</span>;
-  gebouw:omschrijving <span class="hljs-string">"Laan van Westenenk 701, 7334DP Apeldoorn"</span>;
-  nen3610:registratiegegevens &lt;http://example.com/base/registratiegegevens-<span class="hljs-number">0200200000075716</span>&gt;;
-  gebouw:straatnaam <span class="hljs-string">"Laan van Westenenk"</span>;
-  gebouw:plaatsnaam <span class="hljs-string">"Apeldoorn"</span>;
-  gebouw<span class="hljs-selector-pseudo">:is</span>Hoofdadres true .</code></pre>
-
-<p>Each data element can have its own lineage; its own algorithm to determine the given value. By treating these data elements as objects; allows us to describe and provide information about them. For instance to state that <code>{ "plaatsnaam": "Apeldoorn" }</code> is derived from a data element in the BAG. 
-In the following diagram both the object and the data elements are modelled as an objecttype, as they are things; objects, we are interested in describing.</p>
-<p><figure id="fig-generatedID"><img src="media/level1.1.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
-<p>A data element is identified by it's 1) <a data-link-type="dfn|abstract-op" href="#dfn-subject" class="internalDFN" id="ref-for-dfn-subject-1">subject</a> 2) <a data-link-type="dfn|abstract-op" href="#dfn-value" class="internalDFN" id="ref-for-dfn-value-1">value</a> and 3) <a data-link-type="dfn|abstract-op" href="#dfn-property" class="internalDFN" id="ref-for-dfn-property-1">property</a>
-e.g.</p>
-<pre><code aria-busy="false" class="hljs json">{
-    <span class="hljs-attr">"property"</span>: <span class="hljs-string">"plaatsnaam"</span>,
-    <span class="hljs-attr">"value"</span>: {
-        <span class="hljs-attr">"stringValue"</span>: <span class="hljs-string">"Apeldoorn"</span>
-    },
-    <span class="hljs-attr">"subject"</span>: {
-        <span class="hljs-attr">"identificatie"</span>: <span class="hljs-string">"0200200000075716"</span>,
-        <span class="hljs-attr">"domein"</span>: <span class="hljs-literal">null</span>
-    }
-}
+<p>In order to provide metadata about any singular piece of data about a resource, we need to be able to talk about it and in turn capture data about it. The first notion we introduce is the <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-2">data item</a>. Data objects we utilize to draw insights from, or base decisions on, are comprised out of multiple atomic units of data, each captured by one attribute or association. Consider the following data object in JSON:</p>
+<pre><code class="json hljs" aria-busy="false"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"omschrijving"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Laan van Westenenk 701, 7334DP Apeldoorn"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"plaatsnaam"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Apeldoorn"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"identificatie"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"0200200000075716"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"isHoofdadres"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"huisnummer"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">701</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"postcode"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"7334DP"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"straatnaam"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Laan van Westenenk"</span>
+<span class="hljs-punctuation">}</span>
 </code></pre>
-<table class="simple">
+<p>Or, in RDF:</p>
+<pre><code class="turtle hljs" aria-busy="false"><span class="hljs-literal">&lt;http://example.com/id/adres/0200200000075716&gt;</span> <span class="hljs-built_in">a</span> <span class="hljs-symbol">gebouw:Adres;</span>
+  <span class="hljs-symbol">gebouw:postcode</span> <span class="hljs-string">"7334DP"</span>;
+  <span class="hljs-symbol">gebouw:huisnummer</span> <span class="hljs-number">701</span>;
+  <span class="hljs-symbol">gebouw:identificatie</span> <span class="hljs-string">"0200200000075716"</span>;
+  <span class="hljs-symbol">gebouw:omschrijving</span> <span class="hljs-string">"Laan van Westenenk 701, 7334DP Apeldoorn"</span>;
+  <span class="hljs-symbol">nen3610:registratiegegevens</span> <span class="hljs-literal">&lt;http://example.com/base/registratiegegevens-0200200000075716&amp;gt&gt;</span>;
+  <span class="hljs-symbol">gebouw:straatnaam</span> <span class="hljs-string">"Laan van Westenenk"</span>;
+  <span class="hljs-symbol">gebouw:plaatsnaam</span> <span class="hljs-string">"Apeldoorn"</span>;
+  <span class="hljs-symbol">gebouw:isHoofdadres</span> <span class="hljs-literal">true</span> .
+</code></pre>
+<p>Each <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-3">data item</a> can have its own lineage; its own description of how and when it was created. Treating these <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-4">data items</a> as <a data-link-type="dfn|abstract-op" href="#dfn-object" class="internalDFN" id="ref-for-dfn-object-1">objects</a>; allows us to describe and provide data about them. For instance to state that <code>{ "plaatsnaam": "Apeldoorn" }</code> is derived from a <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-5">data item</a> in the BAG. 
+In the following diagram both the <a data-link-type="dfn|abstract-op" href="#dfn-object" class="internalDFN" id="ref-for-dfn-object-2">object</a> and the <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-6">data items</a> are modelled as a type of <a data-link-type="dfn|abstract-op" href="#dfn-object" class="internalDFN" id="ref-for-dfn-object-3">object</a>, as they are things; <a data-link-type="dfn|abstract-op" href="#dfn-object" class="internalDFN" id="ref-for-dfn-object-4">objects</a>, we are interested in describing.</p>
+<p>
+      </p><figure id="fig-data-items-provide-data-about-objects">
+        <img src="media/level1.1.png" alt="">
+        <figcaption><a class="self-link" href="#fig-data-items-provide-data-about-objects">Figure <bdi class="figno">1</bdi></a> <span class="fig-title">Data items provide data about objects</span></figcaption>
+      </figure>
+    <p></p>
+<p>A <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-7">data item</a> is identified by its 1) <a data-link-type="dfn|abstract-op" href="#dfn-subject" class="internalDFN" id="ref-for-dfn-subject-1">subject</a> 2) <a data-link-type="dfn|abstract-op" href="#dfn-value" class="internalDFN" id="ref-for-dfn-value-1">value</a> and 3) <a data-link-type="dfn|abstract-op" href="#dfn-property" class="internalDFN" id="ref-for-dfn-property-1">property</a>
+e.g.</p>
+<pre><code class="json hljs" aria-busy="false"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"property"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"plaatsnaam"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"value"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"stringValue"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Apeldoorn"</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"subject"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"identificatie"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"0200200000075716"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"domein"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">null</span></span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<p>Several subtypes of <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-8">data item</a> are identified; but these are omitted in the following examples for simplicity's sake.</p>
+<p>
+      </p><figure id="fig-several-types-of-data-items">
+        <img src="media/level1.2.png" alt="">
+        <figcaption><a class="self-link" href="#fig-several-types-of-data-items">Figure <bdi class="figno">2</bdi></a> <span class="fig-title">Several types of data items</span></figcaption>
+      </figure>
+    <p></p>
+<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span><span class="issue-label">: Data item vs. Data element</span></div><aside class="">
+A data item is a distinct piece of data that describes an atomic state of a particular object concerning a specific property at a certain time point [<cite><a class="bibref" data-link-type="biblio" href="#bib-udt" title="Unified database theory">UDT</a></cite>][<cite><a class="bibref" data-link-type="biblio" href="#bib-ntm" title="Neuchâtel Terminology Model PART II: Variables and related concepts">NTM</a></cite>]. For example, the height of John Doe is a data item that describes a property of John Doe at a particular time.
+
+<p>On the other hand, a <dfn data-plurals="data elements" id="dfn-data-element" tabindex="0" aria-haspopup="dialog">data element</dfn> is, generally, a concept forming part of a data model [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcs" title="Data Concept System for Data Quality Dimensions">DCS</a></cite>][<cite><a class="bibref" data-link-type="biblio" href="#bib-mim" title="Metamodel Informatie Modellering">MIM</a></cite>] . As an element of data representation, a collection of data elements forms a data structure. In [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso11179" title="ISO/IEC 11179-3">ISO11179</a></cite>] a data element is defined as <code>an &lt;organization of data&gt; unit of data that is considered in context to be indivisible. EXAMPLE The data element “age of a person” with values consisting of all combinations of 3 decimal digits.</code>. This may, however, also indicate a data item.</p>
+<p>In this specification we see the <a data-link-type="dfn|abstract-op" href="#dfn-data-element" class="internalDFN" id="ref-for-dfn-data-element-1">data element</a> as the type of similar <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-9">data item</a>s.</p>
+</aside></div>
+
+<p>A <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-10">data item</a> can be described from different points of view. The perspective a lineage model would take is one of provenance. Questions to be answered include, for instance, where, how and by whom, <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-11">data items</a> such as <code>Building G0200.42b3d39246840268e0530a0a28492340 has construction date 2006</code> are created. Other models could address other aspects of a <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-12">data item</a>; for instance whether it is subject to an examination of correctness (which could be relevant for the BAG: <a href="https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek">https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek</a>) or what is the quality of a <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-13">data item</a>. </p>
+<p>A <a data-link-type="dfn|abstract-op" href="#dfn-data-object" class="internalDFN" id="ref-for-dfn-data-object-1">data object</a> is an <a data-link-type="dfn|abstract-op" href="#dfn-object" class="internalDFN" id="ref-for-dfn-object-5">object</a> consisting of a contextually grouped set of <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-14">data items</a> about a particular <a data-link-type="dfn|abstract-op" href="#dfn-object" class="internalDFN" id="ref-for-dfn-object-6">object</a>. <a data-link-type="dfn|abstract-op" href="#dfn-data-object" class="internalDFN" id="ref-for-dfn-data-object-2">Data objects</a> could be represented as table rows or database records.</p>
+<p>
+      </p><figure id="fig-a-data-object-consists-of-data-items-describing-an-object">
+        <img src="media/level1.3.png" alt="">
+        <figcaption><a class="self-link" href="#fig-a-data-object-consists-of-data-items-describing-an-object">Figure <bdi class="figno">3</bdi></a> <span class="fig-title">A Data object consists of data items describing an object</span></figcaption>
+      </figure>
+    <p></p>
+<p>This gives a basic model applicable for any usecase where data about <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-15">data items</a> is of importance.</p>
+<table>
 <thead>
 <tr>
 <th>Term</th>
@@ -462,141 +516,159 @@ e.g.</p>
 </tr>
 </thead>
 <tbody><tr>
-<td><dfn id="dfn-object" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">object</dfn></td>
-<td>An object is any resource that is the subject of a registration.</td>
+<td><dfn data-plurals="objects" id="dfn-object" tabindex="0" aria-haspopup="dialog">object</dfn></td>
+<td>An object is anything perceivable or conceivable.</td>
 </tr>
 <tr>
-<td><dfn id="dfn-data-element" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">data element</dfn></td>
-<td>A data element is any singular piece of information about a resource.</td>
+<td><dfn data-plurals="data objects" id="dfn-data-object" tabindex="0" aria-haspopup="dialog">data object</dfn></td>
+<td>A data object is an <a data-link-type="dfn|abstract-op" href="#dfn-object" class="internalDFN" id="ref-for-dfn-object-7">object</a> consisting of a contextually grouped set of <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-16">data items</a> about a particular <a data-link-type="dfn|abstract-op" href="#dfn-object" class="internalDFN" id="ref-for-dfn-object-8">object</a>.</td>
 </tr>
 <tr>
-<td><dfn id="dfn-subject" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">subject</dfn></td>
-<td>A subject is an object a data element is about.</td>
+<td><dfn data-plurals="data items" id="dfn-data-item" tabindex="0" aria-haspopup="dialog">data item</dfn></td>
+<td>A data item is a distinct piece of data that describes an atomic state of a particular object concerning a specific property at a certain time point.</td>
 </tr>
 <tr>
-<td><dfn id="dfn-property" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">property</dfn></td>
-<td>A property is the characteristic of the subject a data element is about.</td>
+<td><dfn id="dfn-subject" tabindex="0" aria-haspopup="dialog">subject</dfn></td>
+<td>A subject is an <a data-link-type="dfn|abstract-op" href="#dfn-object" class="internalDFN" id="ref-for-dfn-object-9">object</a> a <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-17">data item</a> is about.</td>
 </tr>
 <tr>
-<td><dfn id="dfn-value" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">value</dfn></td>
-<td>The value of a data element.</td>
+<td><dfn id="dfn-property" tabindex="0" aria-haspopup="dialog">property</dfn></td>
+<td>A property is a feature of an <a data-link-type="dfn|abstract-op" href="#dfn-object" class="internalDFN" id="ref-for-dfn-object-10">object</a>.</td>
+</tr>
+<tr>
+<td><dfn id="dfn-value" tabindex="0" aria-haspopup="dialog">value</dfn></td>
+<td>The value of a <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-18">data item</a>.</td>
 </tr>
 </tbody></table>
-<p>Several subtypes of data elements are identified; but these are omitted in the following examples for simplicity's sake.</p>
-<p><figure id="fig-generatedID-0"><img src="media/level1.2.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID-0">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
-<p>A data element can be described from different point of views. The perpective a lineage model would take is one of provenance. Questions to be answered include, for instance, where, how and by whom, is the statement <code>Building G0200.42b3d39246840268e0530a0a28492340 has construction date 2006</code> created? Other models could address other aspects of a data element; for instance whether it is subject to an examination of correctness (which could be relevant for the BAG: <a href="https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek">https://catalogus.kadaster.nl/bag/nl/page/InOnderzoek</a>) or what is the quality of a data element. </p>
-<p>A data element is part of the information object describing an object; but this is omitted in the following examples.</p>
-<p><figure id="fig-generatedID-1"><img src="media/level1.3.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID-1">Figuur <bdi class="figno">3</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
-<p>This gives a basic model applicable for any usecase where metadata about data elements is of importance.</p>
-<p><figure id="fig-generatedID-2"><img src="media/Data%20element.png" alt=""><figcaption><a class="self-link" href="#fig-generatedID-2">Figuur <bdi class="figno">4</bdi></a> <span class="fig-title"></span></figcaption></figure></p>
+<p>
+      </p><figure id="fig-basic-model-of-object-and-related-data-by-different-type-of-data-items">
+        <img src="media/DataItem.png" alt="">
+        <figcaption><a class="self-link" href="#fig-basic-model-of-object-and-related-data-by-different-type-of-data-items">Figure <bdi class="figno">4</bdi></a> <span class="fig-title">Basic model of object and related data by different type of data items</span></figcaption>
+      </figure>
+    <p></p>
 </section>
+  
+
   <section id="metadata-mim-extension"><div class="header-wrapper"><h2 id="x3-metadata-mim-extension"><bdi class="secno">3. </bdi>Metadata MIM extension</h2><a class="self-link" href="#metadata-mim-extension" aria-label="Permalink for Section 3."></a></div>
-<p>Lineage information is considered as metadata in relation to elements in a productmodel. For this reason we consider lineage as metadata and will provide a common solution to relate metadata to semantics of a productmodel.</p>
+<p>For this extention a common solution to relate metadata to semantics of a logical data model is provided.</p>
 <section id="requirements"><div class="header-wrapper"><h3 id="x3-1-requirements"><bdi class="secno">3.1 </bdi>Requirements</h3><a class="self-link" href="#requirements" aria-label="Permalink for Section 3.1"></a></div>
-<p>The lineage model provides lineage information as metadata at the property level .</p>
-<p>Requirements of the metadata in this respect are the following:</p>
+<p>The extention provides a metamodel to model metadata - data about =[data items=]. </p>
+<p>Requirements of for this metamodel in this respect are the following:</p>
 <ol>
-<li>metadata at the property level of objecttypes</li>
-<li>metadata at the instance level of properties</li>
+<li>bind metadata models at the <a data-link-type="dfn|abstract-op" href="#dfn-property" class="internalDFN" id="ref-for-dfn-property-2">property</a> level of object types</li>
+<li>ability to express metadata at the level of <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-19">data items</a></li>
 <li>metadata can optionally be published</li>
-<li>metadata model does not have effect on a productmodel</li>
+<li>metadata model does not have effect on the structure of a logical data model</li>
 </ol>
-<p>ad 1,2: UML-MIM does not have a construct to bind (meta)data at properties, i.e. attributes or association ends. It is therefore necessary to extend UML-MIM.</p>
-<p>ad 3,4: The metadata or in this case lineage model is modelled independently from the product model. Both are 'loosely' connected.</p>
-<p>An approach to these requirements can be found in the [<cite><a class="bibref" data-link-type="biblio" href="#bib-property-stereotype-for-metadata" title="Property Stereotype for Metadata">Property-Stereotype-for-Metadata</a></cite>]. This publication presents an UML extension through a stereotype <code>«propertyMetadata»</code> and a tagged value <code>metadataType</code>. An example is presented below.</p>
-<figure id="Figure_1">
-<img src="media/example_extension.png" alt="">
-<figcaption><a class="self-link" href="#Figure_1">Figuur <bdi class="figno">5</bdi></a> <span class="fig-title">Example showing use of stereotype: Properties with stereotype <code>«HasMetadata»</code> reference metadata types via tagged value <code>metadataType</code>. Source:[<cite><a class="bibref" data-link-type="biblio" href="#bib-property-stereotype-for-metadata" title="Property Stereotype for Metadata">Property-Stereotype-for-Metadata</a></cite>]</span></figcaption>
-</figure>
-
-
-<p>The above presented pattern is slightly adapted by changing the sterotype name from propertyMetadata to a general <code>«HasMetadata»</code>. The pattern is presented below on a general class AnyFeature representing any possible feature type in a productmodel.</p>
-<figure id="Figure_2">
-<img src="media/ProductmodelProxy.png" alt="">
-<figcaption><a class="self-link" href="#Figure_2">Figuur <bdi class="figno">6</bdi></a> <span class="fig-title">Metadata expressed at the conceptual level of a productmodel</span></figcaption>
-</figure>
-
+<p>ad 1,2: MIM-UML does not have a construct to bind (meta)data to properties, i.e. attributes or association ends. It is therefore necessary to extend MIM-UML.</p>
+<p>ad 3,4: The metadata is modelled independently from the logical data model. Both are 'loosely' connected.</p>
+<p>An approach to these requirements can be found in the [<cite><a class="bibref" data-link-type="biblio" href="#bib-property-stereotype-for-metadata" title="Property Stereotype for Metadata">Property-Stereotype-for-Metadata</a></cite>]. This publication presents a UML profile extension of [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-19109-2015" title="Geographic information -- Rules for application schema">iso-19109-2015</a></cite>] through a stereotype <code>«propertyMetadata»</code> and a tagged value <code>metadataType</code>. An example is presented below.</p>
+<p>
+      </p><figure id="fig-example-showing-use-of-stereotype-properties-with-stereotype-hasmetadata-reference-metadata-types-via-tagged-value-metadatatype-source-property-stereotype-for-metadata">
+        <img src="media/example_extension.png" alt="">
+        <figcaption><a class="self-link" href="#fig-example-showing-use-of-stereotype-properties-with-stereotype-hasmetadata-reference-metadata-types-via-tagged-value-metadatatype-source-property-stereotype-for-metadata">Figure <bdi class="figno">5</bdi></a> <span class="fig-title">Example showing use of stereotype: Properties with stereotype <code>«HasMetadata»</code> reference metadata types via tagged value <code>metadataType</code>. Source:[<cite><a class="bibref" data-link-type="biblio" href="#bib-property-stereotype-for-metadata" title="Property Stereotype for Metadata">Property-Stereotype-for-Metadata</a></cite>]</span></figcaption>
+      </figure>
+    <p></p>
+<p>For this use case, the above presented pattern is slightly adapted by changing the stereotype name from <code>«propertyMetadata»</code> to a general <code>«HasMetadata»</code>. The pattern is presented below on a general class <code>AnyFeature</code> representing any possible feature type in a logical data model.</p>
+<p>
+      </p><figure id="fig-metadata-expressed-at-the-conceptual-level-of-a-logical-data-model">
+        <img src="media/ProductmodelProxy.png" alt="">
+        <figcaption><a class="self-link" href="#fig-metadata-expressed-at-the-conceptual-level-of-a-logical-data-model">Figure <bdi class="figno">6</bdi></a> <span class="fig-title">Metadata expressed at the conceptual level of a logical data model</span></figcaption>
+      </figure>
+    <p></p>
 </section><section id="explanation-and-definition"><div class="header-wrapper"><h3 id="x3-2-explanation-and-definition"><bdi class="secno">3.2 </bdi>Explanation and definition</h3><a class="self-link" href="#explanation-and-definition" aria-label="Permalink for Section 3.2"></a></div>
 <p>Stereotype «HasMetadata»</p>
 <blockquote>
-<p>  <strong>Definition «HasMetadata»</strong><br>  This element has associated metadata.</p>
+<p>  <strong>Definition <dfn id="dfn-hasmetadata" tabindex="0" aria-haspopup="dialog">«HasMetadata»</dfn></strong><br>  This element has associated metadata.</p>
 </blockquote>
 <p>Description:
-The stereotype specifies that this information element has metadata associated. This is a specification at the conceptual level. A related tagged value <code>Metadata type</code> specifies the association to specific metadata.</p>
+The stereotype specifies that this <a data-link-type="dfn|abstract-op" href="#dfn-data-element" class="internalDFN" id="ref-for-dfn-data-element-2">data element</a> has metadata associated. This is a specification at the conceptual level. A related tagged value <code>Metadata type</code> specifies the association to specific metadata.</p>
 <p>Tagged Value: Metadata type</p>
 <blockquote>
-<p>  <strong>Definition Metadata type</strong><br>  Name of the target class of associated metadata.</p>
+<p>  <strong>Definition <dfn id="dfn-metadata-type" tabindex="0" aria-haspopup="dialog">Metadata type</dfn></strong><br>  Name of the target class of associated metadata.</p>
 </blockquote>
 <p>Description:
-This tagged value specifies the relation to a specific target class of or in a specific metadata model. This target class serves as the receptor defining the type of metadata that is associated.</p>
-<p>In figure 2 the value for <code>Metadata type = GeorkestreerdGegeven</code> is only an example and may differ according to the required metadata class that relates to the specified metadata.</p>
+This tagged value specifies the relation to a specific target class in a specific metadata model. This target class serves as the receptor defining the type of metadata that is associated.</p>
+<p>In <a href="#fig-metadata-expressed-at-the-conceptual-level-of-a-logical-data-model" data-matched-text="[[[#fig-metadata-expressed-at-the-conceptual-level-of-a-logical-data-model]]]" class="fig-ref" title="Metadata expressed at the conceptual level of a logical data model">Figure <bdi class="">6</bdi></a> the value for <code>Metadata type = GeorkestreerdGegeven</code> is only an example and may differ according to the required metadata class that relates to the specified metadata.</p>
 </section><section id="mim-uml-extension"><div class="header-wrapper"><h3 id="x3-3-mim-uml-extension"><bdi class="secno">3.3 </bdi>MIM-UML extension</h3><a class="self-link" href="#mim-uml-extension" aria-label="Permalink for Section 3.3"></a></div>
-<p>The defined stereotype and related tagged value lead to an extension of the MIM model. As the extension for now is independent from MIM the extension is described both as an extension of the UML metamodel and the MIM-UML model.</p>
-<p><strong>Extension on UML</strong></p>
-<figure id="Figure_3">
-<img src="media/UML extension.png" alt="">
-<figcaption><a class="self-link" href="#Figure_3">Figuur <bdi class="figno">7</bdi></a> <span class="fig-title">Stereotype <code>«HasMetadata»</code> as extension on UML metaclass Property</span></figcaption>
-</figure>
-
+<p>The defined stereotype and related tagged value lead to an extension of the MIM metamodel. As the extension for now is independent from MIM the extension is described both as an extension of the UML profile metamodel of the [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-19109-2015" title="Geographic information -- Rules for application schema">iso-19109-2015</a></cite>] and the MIM-UML metamodel.</p>
+<p><strong>Extension on UML [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-19109-2015" title="Geographic information -- Rules for application schema">iso-19109-2015</a></cite>]</strong></p>
+<p>
+      </p><figure id="fig-stereotype-hasmetadata-as-extension-on-uml-metaclass-property">
+        <img src="media/UML%20extension.png" alt="">
+        <figcaption><a class="self-link" href="#fig-stereotype-hasmetadata-as-extension-on-uml-metaclass-property">Figure <bdi class="figno">7</bdi></a> <span class="fig-title">Stereotype <code>«HasMetadata»</code> as extension on UML metaclass Property</span></figcaption>
+      </figure>
+    <p></p>
 <p>This UML profile is implemented in a EA MDG Technology named <a href="UML-profile/HasMetadata_mdg_build01.xml">HasMetadata_mdg</a>.</p>
 <p><strong>Extension on MIM-UML</strong></p>
-<figure id="Figure_4">
-<img src="" alt="">
-<figcaption><a class="self-link" href="#Figure_4">Figuur <bdi class="figno">8</bdi></a> <span class="fig-title">Todo: Stereotype <code>«HasMetadata»</code> as extension on MIM-UML metaclasses</span></figcaption>
-</figure>
- 
- 
+<p>The metadata information as related to properties in the context of MIM relates to several MIM metaclasses. The <code>«HasMetadata»</code> stereotype is defined as an extension on these MIM classes.</p>
+<p>
+      </p><figure id="fig-stereotype-hasmetadata-as-extension-on-mim-uml-metaclasses">
+        <img src="media/MIM%20hasMetadata%20extensie.png" alt="">
+        <figcaption><a class="self-link" href="#fig-stereotype-hasmetadata-as-extension-on-mim-uml-metaclasses">Figure <bdi class="figno">8</bdi></a> <span class="fig-title">Stereotype <code>«HasMetadata»</code> as extension on MIM-UML metaclasses</span></figcaption>
+      </figure>
+    <p></p>
 <p> <strong>Example of this Metadata profile applied in a MIM-UML model.</strong></p>
- <figure id="Figure_5">
-<img src="media/Example_gebouw.png" alt="">
-<figcaption><a class="self-link" href="#Figure_5">Figuur <bdi class="figno">9</bdi></a> <span class="fig-title">Example of Stereotype <code>«HasMetadata»</code> applied in MIM-UML model</span></figcaption>
-</figure>
-
+<p> 
+      </p><figure id="fig-example-of-stereotype-hasmetadata-applied-in-mim-uml-model">
+        <img src="media/Example_gebouw.png" alt="">
+        <figcaption><a class="self-link" href="#fig-example-of-stereotype-hasmetadata-applied-in-mim-uml-model">Figure <bdi class="figno">9</bdi></a> <span class="fig-title">Example of Stereotype <code>«HasMetadata»</code> applied in MIM-UML model</span></figcaption>
+      </figure>
+    <p></p>
 </section><section id="implementation-encoding"><div class="header-wrapper"><h3 id="x3-4-implementation-encoding"><bdi class="secno">3.4 </bdi>Implementation, encoding</h3><a class="self-link" href="#implementation-encoding" aria-label="Permalink for Section 3.4"></a></div>
-<p>The challenges regarding the implementation of this conceptual metadata construct vary across different encoding formats. For example in XML a construct exists to add attributes to XML elements, which provides a means to give attributes to properties, in this case reference to a metadata object. In JSON this does not exist. The <code>«HasMetadata»</code> stereotype is therefore extended with a model transformation that objectifies properties of a productmodel. The objectified properties are not part of the productmodel but serve as a loosly coupled intermediate binding mechanism between data and metadata.</p>
+<p>The challenges regarding the implementation of this conceptual metadata construct vary across different encoding formats. For example in XML a construct exists to add attributes to XML elements, which provides a means to give attributes to properties, in this case reference to a metadata object. In JSON this does not exist. The <code>«HasMetadata»</code> stereotype is therefore extended with a model transformation that objectifies properties of a logical data model. The objectified properties are not part of the logical data model but serve as a loosely coupled intermediate binding mechanism between data and metadata.</p>
 <p>The UML model of this pattern is presented below.</p>
-<figure id="Figure_6">
-<img src="media/Binding model.png" alt="">
-<figcaption><a class="self-link" href="#Figure_6">Figuur <bdi class="figno">10</bdi></a> <span class="fig-title">Pattern for the Metadata binding model. Objectification of properties.</span></figcaption>
-</figure>
-
-
-<p>Explanation of diagram.<br>The Metadata binding model serves as a objectification of the properties of the productmodel. Each property (attributes and association roles) is transfomed to an instance of the objecttype <code>GeorkestreerdGegeven</code> having its name in <code>propertyName</code>. Depending on the type of property (or its associated value type) a SimplePropertData, ComplexPropertyData or the AssociationPropertyData is chosen.
-SimplePropertyData for properties with a unstructured valuetypes, ComplexPropertyData for structured valuetypes and AssociationPropertyData for association roles.
-The value of a property is transformed to the <code>value</code> attribute or the <code>value</code> association role.</p>
-<p>In this model there is no explicit information link between a property and its value of the productmodel and its objectified <code>PropertyData</code> and value instance. To bind data of the productmodel to instances of 'PropertyData' is bij convention. The convention is that instances from objecttypes of the Productmodel and its properties and values by convention are bindend to instances of PropertyData and values in the Metadata Binding Model having the value for <code>propertName</code> and <code>value</code> equal to the name of the property and its value.<br>So without specifying specifically for the three subtypes of <code>GeorkestreerdGegeven</code> the convention rule is: <code>Productmodel.property = GeorkestreerdGegeven.propertyName AND Productmodel.property.value = GeorkestreerdGegeven.value</code></p>
+<p>
+      </p><figure id="fig-pattern-for-the-metadata-binding-model-objectification-of-properties">
+        <img src="media/Binding%20model.png" alt="">
+        <figcaption><a class="self-link" href="#fig-pattern-for-the-metadata-binding-model-objectification-of-properties">Figure <bdi class="figno">10</bdi></a> <span class="fig-title">Pattern for the Metadata binding model. Objectification of properties.</span></figcaption>
+      </figure>
+    <p></p>
+<p>Explanation of diagram.<br>The Metadata binding model serves as a model for the <a data-link-type="dfn|abstract-op" href="#dfn-data-element" class="internalDFN" id="ref-for-dfn-data-element-3">data elements</a> of the logical data model allowing us to express <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-20">data items</a> as objects. Each <a data-link-type="dfn|abstract-op" href="#dfn-property" class="internalDFN" id="ref-for-dfn-property-3">property</a> (attributes and association roles) is transfomed to an instance of the object type <code>OrchestratedDataItem</code> where the value of <code>property</code> is the property name. Depending on the type of property (or its associated value type) a <code>SimpleDataItem</code>, <code>ComplexDataItem</code> or the <code>RelationDataItem</code> is chosen.</p>
+<p><code>SimpleDataItem</code> for properties with a unstructured value types, <code>ComplexDataItem</code> for structured value types and <code>RelationDataItem</code> for association roles.
+The <a data-link-type="dfn|abstract-op" href="#dfn-value" class="internalDFN" id="ref-for-dfn-value-2">value</a> for a property is transformed to the <code>value</code> attribute or the <code>value</code> association role.</p>
+<p>In this model there is no explicit link, expressed in a data structure, between a data value for a property in the original logical data model and its corresponding objectified <a data-link-type="dfn|abstract-op" href="#dfn-data-item" class="internalDFN" id="ref-for-dfn-data-item-21">data item</a>. The link is there by definition, as defined in <a href="#vocabulary" data-matched-text="[[[#vocabulary]]]" class="sec-ref"><bdi class="secno">2. </bdi>Vocabulary</a>, because the value for <code>property</code> and <code>value</code> equal the name of the property of the object type in the original logical data model and the data value, respectively.</p>
+<p>Without specifying specifically for the three subtypes of <code>OrchestratedDataItem</code> the rule is: <code>DataModel.property.name = DataItem.property.value AND DataModel.property.value = DataItem.value.value</code></p>
 </section></section>
 
-  <section id="conformance"><div class="header-wrapper"><h2 id="x4-conformiteit"><bdi class="secno">4. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 4."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
-  <section id="tof"><div class="header-wrapper"><h2 id="x5-lijst-met-figuren"><bdi class="secno">5. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 5."></a></div><ul class="tof">
+ 
+  <section id="tof"><div class="header-wrapper"><h2 id="x4-list-of-figures"><bdi class="secno">4. </bdi>List of Figures</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 4."></a></div><ul class="tof">
         <li class="tofline">
-    <a class="tocxref" href="#fig-generatedID"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-data-items-provide-data-about-objects"><span class="self-link">Figure <bdi class="figno">1</bdi></span> <span class="fig-title">Data items provide data about objects</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-0"><span class="self-link">Figuur <bdi class="figno">2</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-several-types-of-data-items"><span class="self-link">Figure <bdi class="figno">2</bdi></span> <span class="fig-title">Several types of data items</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-1"><span class="self-link">Figuur <bdi class="figno">3</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-a-data-object-consists-of-data-items-describing-an-object"><span class="self-link">Figure <bdi class="figno">3</bdi></span> <span class="fig-title">A Data object consists of data items describing an object</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#fig-generatedID-2"><span class="self-link">Figuur <bdi class="figno">4</bdi></span> <span class="fig-title"></span></a>
+    <a class="tocxref" href="#fig-basic-model-of-object-and-related-data-by-different-type-of-data-items"><span class="self-link">Figure <bdi class="figno">4</bdi></span> <span class="fig-title">Basic model of object and related data by different type of data items</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_1"><span class="self-link">Figuur <bdi class="figno">5</bdi></span> <span class="fig-title">Example showing use of stereotype: Properties with stereotype <code>«HasMetadata»</code> reference metadata types via tagged value <code>metadataType</code>. Source:[<cite><span class="bibref" data-link-type="biblio">Property-Stereotype-for-Metadata</span></cite>]</span></a>
+    <a class="tocxref" href="#fig-example-showing-use-of-stereotype-properties-with-stereotype-hasmetadata-reference-metadata-types-via-tagged-value-metadatatype-source-property-stereotype-for-metadata"><span class="self-link">Figure <bdi class="figno">5</bdi></span> <span class="fig-title">Example showing use of stereotype: Properties with stereotype <code>«HasMetadata»</code> reference metadata types via tagged value <code>metadataType</code>. Source:[<cite><span class="bibref" data-link-type="biblio">Property-Stereotype-for-Metadata</span></cite>]</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_2"><span class="self-link">Figuur <bdi class="figno">6</bdi></span> <span class="fig-title">Metadata expressed at the conceptual level of a productmodel</span></a>
+    <a class="tocxref" href="#fig-metadata-expressed-at-the-conceptual-level-of-a-logical-data-model"><span class="self-link">Figure <bdi class="figno">6</bdi></span> <span class="fig-title">Metadata expressed at the conceptual level of a logical data model</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_3"><span class="self-link">Figuur <bdi class="figno">7</bdi></span> <span class="fig-title">Stereotype <code>«HasMetadata»</code> as extension on UML metaclass Property</span></a>
+    <a class="tocxref" href="#fig-stereotype-hasmetadata-as-extension-on-uml-metaclass-property"><span class="self-link">Figure <bdi class="figno">7</bdi></span> <span class="fig-title">Stereotype <code>«HasMetadata»</code> as extension on UML metaclass Property</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_4"><span class="self-link">Figuur <bdi class="figno">8</bdi></span> <span class="fig-title">Todo: Stereotype <code>«HasMetadata»</code> as extension on MIM-UML metaclasses</span></a>
+    <a class="tocxref" href="#fig-stereotype-hasmetadata-as-extension-on-mim-uml-metaclasses"><span class="self-link">Figure <bdi class="figno">8</bdi></span> <span class="fig-title">Stereotype <code>«HasMetadata»</code> as extension on MIM-UML metaclasses</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_5"><span class="self-link">Figuur <bdi class="figno">9</bdi></span> <span class="fig-title">Example of Stereotype <code>«HasMetadata»</code> applied in MIM-UML model</span></a>
+    <a class="tocxref" href="#fig-example-of-stereotype-hasmetadata-applied-in-mim-uml-model"><span class="self-link">Figure <bdi class="figno">9</bdi></span> <span class="fig-title">Example of Stereotype <code>«HasMetadata»</code> applied in MIM-UML model</span></a>
   </li><li class="tofline">
-    <a class="tocxref" href="#Figure_6"><span class="self-link">Figuur <bdi class="figno">10</bdi></span> <span class="fig-title">Pattern for the Metadata binding model. Objectification of properties.</span></a>
+    <a class="tocxref" href="#fig-pattern-for-the-metadata-binding-model-objectification-of-properties"><span class="self-link">Figure <bdi class="figno">10</bdi></span> <span class="fig-title">Pattern for the Metadata binding model. Objectification of properties.</span></a>
   </li>
       </ul></section>
-  <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
-    <div class="header-wrapper"><h3 id="a-1-begrippen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
+ <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
+    <div class="header-wrapper"><h3 id="a-1-terms-defined-by-this-specification"><bdi class="secno">A.1 </bdi>Terms defined by this specification</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
     <ul class="index">
     <li>
       <a class="index-term" href="#dfn-data-element">data element</a> 
     <span class="print-only">§2.</span></li><li>
+      <a class="index-term" href="#dfn-data-item">data item</a> 
+    <span class="print-only">§2.</span></li><li>
+      <a class="index-term" href="#dfn-data-object">data object</a> 
+    <span class="print-only">§2.</span></li><li>
+      <a class="index-term" href="#dfn-hasmetadata">«HasMetadata»</a> 
+    <span class="print-only">§3.2</span></li><li>
+      <a class="index-term" href="#dfn-metadata-type">Metadata type</a> 
+    <span class="print-only">§3.2</span></li><li>
       <a class="index-term" href="#dfn-object">object</a> 
     <span class="print-only">§2.</span></li><li>
       <a class="index-term" href="#dfn-property">property</a> 
@@ -607,7 +679,7 @@ The value of a property is transformed to the <code>value</code> attribute or th
     <span class="print-only">§2.</span></li>
   </ul>
   </section><section id="index-defined-elsewhere">
-    <div class="header-wrapper"><h3 id="a-2-begrippen-gedefinieerd-door-verwijzing"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
+    <div class="header-wrapper"><h3 id="a-2-terms-defined-by-reference"><bdi class="secno">A.2 </bdi>Terms defined by reference</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
     <ul class="index">
     
   </ul>
@@ -615,24 +687,26 @@ The value of a property is transformed to the <code>value</code> attribute or th
 
 
 
-<section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-referenties"><bdi class="secno">B. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="normatieve-referenties">
-    <div class="header-wrapper"><h3 id="b-1-normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</h3><a class="self-link" href="#normatieve-referenties" aria-label="Permalink for Appendix B.1"></a></div>
-    <dl class="bibliography"><dt id="bib-property-stereotype-for-metadata">[Property-Stereotype-for-Metadata]</dt><dd>
+<section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-references"><bdi class="secno">B. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="informative-references">
+    <div class="header-wrapper"><h3 id="b-1-informative-references"><bdi class="secno">B.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix B.1"></a></div>
+    <dl class="bibliography"><dt id="bib-dcs">[DCS]</dt><dd>
+      <a href="https://www.dama-nl.org/wp-content/uploads/2020/09/DCS-Data-Concept-System-DDQ-Research-Paper-version-1.2-d.d.-3-Sept-2020.pdf"><cite>Data Concept System for Data Quality Dimensions</cite></a>.  DAMA NL. 2020-09. Published. URL: <a href="https://www.dama-nl.org/wp-content/uploads/2020/09/DCS-Data-Concept-System-DDQ-Research-Paper-version-1.2-d.d.-3-Sept-2020.pdf">https://www.dama-nl.org/wp-content/uploads/2020/09/DCS-Data-Concept-System-DDQ-Research-Paper-version-1.2-d.d.-3-Sept-2020.pdf</a>
+    </dd><dt id="bib-iso-19109-2015">[iso-19109-2015]</dt><dd>
+      <a href="https://www.iso.org/standard/59193.html"><cite>Geographic information -- Rules for application schema</cite></a>. ISO/TC 211.  ISO. 2015. International Standard. URL: <a href="https://www.iso.org/standard/59193.html">https://www.iso.org/standard/59193.html</a>
+    </dd><dt id="bib-iso11179">[ISO11179]</dt><dd>
+      <a href="https://www.iso.org/standard/78915.html"><cite>ISO/IEC 11179-3</cite></a>.  International Organization for Standardization (ISO). 2023-01. Published. URL: <a href="https://www.iso.org/standard/78915.html">https://www.iso.org/standard/78915.html</a>
+    </dd><dt id="bib-mim">[MIM]</dt><dd>
+      <a href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/"><cite>Metamodel Informatie Modellering</cite></a>.  Geonovum. 1.1.1. URL: <a href="https://docs.geostandaarden.nl/mim/def-st-mim-20220217/">https://docs.geostandaarden.nl/mim/def-st-mim-20220217/</a>
+    </dd><dt id="bib-ntm">[NTM]</dt><dd>
+      <a href="https://web.archive.org/web/20120305234809/http://www1.unece.org/stat/platform/download/attachments/14319930/Neuchatel+Model+V1.pdf?version=1"><cite>Neuchâtel Terminology Model PART II: Variables and related concepts</cite></a>. Published. URL: <a href="https://web.archive.org/web/20120305234809/http://www1.unece.org/stat/platform/download/attachments/14319930/Neuchatel+Model+V1.pdf?version=1">https://web.archive.org/web/20120305234809/http://www1.unece.org/stat/platform/download/attachments/14319930/Neuchatel+Model+V1.pdf?version=1</a>
+    </dd><dt id="bib-property-stereotype-for-metadata">[Property-Stereotype-for-Metadata]</dt><dd>
       <a href="https://shapechange.net/wp-content/uploads/2019/12/UGAS19-D100_property_stereotypes.pdf"><cite>Property Stereotype for Metadata</cite></a>.  Publisher-1. V1.0. URL: <a href="https://shapechange.net/wp-content/uploads/2019/12/UGAS19-D100_property_stereotypes.pdf">https://shapechange.net/wp-content/uploads/2019/12/UGAS19-D100_property_stereotypes.pdf</a>
+    </dd><dt id="bib-udt">[UDT]</dt><dd>
+      <a href="https://www.odaba.com/content/downloads/documentation/P1_UnifiedDatabaseTheory.pdf"><cite>Unified database theory</cite></a>.  International Organization for Standardization (ISO). Published. URL: <a href="https://www.odaba.com/content/downloads/documentation/P1_UnifiedDatabaseTheory.pdf">https://www.odaba.com/content/downloads/documentation/P1_UnifiedDatabaseTheory.pdf</a>
     </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
-  </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-object" aria-label="Links in this document to definition: object">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-object" aria-label="Permalink for definition: object. Activate to close this dialog.">Permalink</a>
-         
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-      <li>Not referenced in this document.</li>
-    </ul>
-    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-data-element" aria-label="Links in this document to definition: data element">
+  </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-data-element" aria-label="Links in this document to definition: data element">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-data-element" aria-label="Permalink for definition: data element. Activate to close this dialog.">Permalink</a>
@@ -641,8 +715,54 @@ The value of a property is transformed to the <code>value</code> attribute or th
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-data-element-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
-  </li>
+      <a href="#ref-for-dfn-data-element-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-element-2" title="§ 3.2 Explanation and definition">§ 3.2 Explanation and definition</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-element-3" title="§ 3.4 Implementation, encoding">§ 3.4 Implementation, encoding</a> 
+    </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-object" aria-label="Links in this document to definition: object">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-object" aria-label="Permalink for definition: object. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+      <a href="#ref-for-dfn-object-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> <a href="#ref-for-dfn-object-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-object-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-object-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-object-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-object-6" title="Reference 6">(6)</a> <a href="#ref-for-dfn-object-7" title="Reference 7">(7)</a> <a href="#ref-for-dfn-object-8" title="Reference 8">(8)</a> <a href="#ref-for-dfn-object-9" title="Reference 9">(9)</a> <a href="#ref-for-dfn-object-10" title="Reference 10">(10)</a> 
+    </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-data-object" aria-label="Links in this document to definition: data object">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-data-object" aria-label="Permalink for definition: data object. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+      <a href="#ref-for-dfn-data-object-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> <a href="#ref-for-dfn-data-object-2" title="Reference 2">(2)</a> 
+    </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-data-item" aria-label="Links in this document to definition: data item">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-data-item" aria-label="Permalink for definition: data item. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+      <a href="#ref-for-dfn-data-item-1" title="§ 1. Introduction">§ 1. Introduction</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-item-2" title="§ 2. Vocabulary">§ 2. Vocabulary</a> <a href="#ref-for-dfn-data-item-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-data-item-4" title="Reference 3">(3)</a> <a href="#ref-for-dfn-data-item-5" title="Reference 4">(4)</a> <a href="#ref-for-dfn-data-item-6" title="Reference 5">(5)</a> <a href="#ref-for-dfn-data-item-7" title="Reference 6">(6)</a> <a href="#ref-for-dfn-data-item-8" title="Reference 7">(7)</a> <a href="#ref-for-dfn-data-item-9" title="Reference 8">(8)</a> <a href="#ref-for-dfn-data-item-10" title="Reference 9">(9)</a> <a href="#ref-for-dfn-data-item-11" title="Reference 10">(10)</a> <a href="#ref-for-dfn-data-item-12" title="Reference 11">(11)</a> <a href="#ref-for-dfn-data-item-13" title="Reference 12">(12)</a> <a href="#ref-for-dfn-data-item-14" title="Reference 13">(13)</a> <a href="#ref-for-dfn-data-item-15" title="Reference 14">(14)</a> <a href="#ref-for-dfn-data-item-16" title="Reference 15">(15)</a> <a href="#ref-for-dfn-data-item-17" title="Reference 16">(16)</a> <a href="#ref-for-dfn-data-item-18" title="Reference 17">(17)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-item-19" title="§ 3.1 Requirements">§ 3.1 Requirements</a> 
+    </li><li>
+      <a href="#ref-for-dfn-data-item-20" title="§ 3.4 Implementation, encoding">§ 3.4 Implementation, encoding</a> <a href="#ref-for-dfn-data-item-21" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-subject" aria-label="Links in this document to definition: subject">
       <span class="caret"></span>
@@ -653,8 +773,8 @@ The value of a property is transformed to the <code>value</code> attribute or th
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-subject-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
-  </li>
+      <a href="#ref-for-dfn-subject-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-property" aria-label="Links in this document to definition: property">
       <span class="caret"></span>
@@ -665,8 +785,12 @@ The value of a property is transformed to the <code>value</code> attribute or th
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-property-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
-  </li>
+      <a href="#ref-for-dfn-property-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
+    </li><li>
+      <a href="#ref-for-dfn-property-2" title="§ 3.1 Requirements">§ 3.1 Requirements</a> 
+    </li><li>
+      <a href="#ref-for-dfn-property-3" title="§ 3.4 Implementation, encoding">§ 3.4 Implementation, encoding</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-value" aria-label="Links in this document to definition: value">
       <span class="caret"></span>
@@ -677,9 +801,31 @@ The value of a property is transformed to the <code>value</code> attribute or th
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-value-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
-  </li>
+      <a href="#ref-for-dfn-value-1" title="§ 2. Vocabulary">§ 2. Vocabulary</a> 
+    </li><li>
+      <a href="#ref-for-dfn-value-2" title="§ 3.4 Implementation, encoding">§ 3.4 Implementation, encoding</a> 
+    </li>
   </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-hasmetadata" aria-label="Links in this document to definition: «HasMetadata»">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-hasmetadata" aria-label="Permalink for definition: «HasMetadata». Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-metadata-type" aria-label="Links in this document to definition: Metadata type">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-metadata-type" aria-label="Permalink for definition: Metadata type. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
     </div><script id="respec-dfn-panel">(() => {
 // @ts-check
 if (document.respec) {
@@ -902,4 +1048,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><div class="sidelabel" style="background-color: #FF0000;">Geonovum Handreiking - Werkversie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
+})()</script><div class="sidelabel">Geonovum Guide - Editor's draft</div><script src="https://gitdocumentatie.logius.nl/publicatie/respec/fixup.js"></script></body></html>
